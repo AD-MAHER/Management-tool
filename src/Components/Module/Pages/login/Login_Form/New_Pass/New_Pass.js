@@ -4,14 +4,16 @@ import { Input, Form } from 'antd';
 import Button1 from '../../../../globalComponents/Button/Button1';
 import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import { NavLink } from "react-router-dom";
-
-export default function NewPass() {
+import {ArrowLeftOutlined} from '@ant-design/icons';
+export default function New_Pass() {
   return (
     <>
 
       <NewPassStyle>
+     
         <div className="loginClass">
-
+        <NavLink to="/"><span><ArrowLeftOutlined className="Icon_Class"/></span></NavLink>
+        
           <img className="Logo2" src={Zeronsec_Logo} alt="Zeronsec" />
 
           <h2 className="Head2">Change Password</h2>
@@ -60,7 +62,7 @@ export default function NewPass() {
             <NavLink to="/">
               <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
                 className="button_css"
-                type='button'>Change Password</Button1>
+                type='button'><span>Change Password</span></Button1>
 
             </NavLink>
           </Form>

@@ -5,14 +5,17 @@ import Input1 from '../../../../globalComponents/FormComp/Input1';
 import Button1 from '../../../../globalComponents/Button/Button1';
 import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import { ForgotStyle } from './ForgotStyle';
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { ArrowLeftOutlined } from '@ant-design/icons';
+
 export default function Forgot_Password() {
     return (
         <>
+        
             <ForgotStyle>
-
+            
                 <div className="loginClass">
-                   
+                <NavLink to="/"><span><ArrowLeftOutlined  className="Icon_Class"/></span></NavLink>
                     <img className="Logo2" src={Zeronsec_Logo} alt="Zeronsec" />
 
                     <h2 className="Head2">Forgot Password</h2>
@@ -26,7 +29,7 @@ export default function Forgot_Password() {
                         ]} input={<Input />} />
 
 
-                        <NavLink to="/req_OTP"><Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
+                        <NavLink to='/verify_otp'><Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
                             className="button_css"
                             type='button'>Request OTP</Button1></NavLink>
 

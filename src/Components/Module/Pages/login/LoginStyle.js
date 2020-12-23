@@ -7,10 +7,12 @@ export const LoginStyle = styled.div`
     color:#979797;
 }
 
-
-.anticon{
-    color:#979797;
+.Icon_Class{
+  font: 12px/30px;
+  
+   color: #FFFFFF;
 }
+
    
 .ant-form-item-control-input{
         
@@ -153,7 +155,7 @@ export const LoginStyle = styled.div`
 
 
     .right_div{
-        span={12};
+        width: 100%;
        position:fixed;
         margin:0;
         pading:0;
@@ -168,8 +170,8 @@ export const LoginStyle = styled.div`
     }
     
     .loginClass{
-        margin-top : 40%;
-        margin-left: 20%;
+        margin-top : 50%;
+        margin-left: 30%;
         font-size : 16px;
         color: #E8E8E8;
         height:10%;
@@ -184,8 +186,39 @@ export const LoginStyle = styled.div`
         
     }
  }
- @media (max-width: 400px) {
-   
+
+
+ @media  only (max-width:  480px) {
+    .loginClass{
+        margin-top : 50%;
+        margin-left: 20%;
+        font-size : 16px;
+        color: #E8E8E8;
+        height:10%;
+        width:50vw;
+       
+    }
+    .left_div {
+        display:none;
+    }
+    
+ }
+ @media (max-width  576px ){
+    .loginClass{
+        margin-top : 50%;
+        margin-left: 10%;
+        font-size : 16px;
+        color: #E8E8E8;
+        height:10%;
+        width:50vw;
+       
+    }
+    .left_div {
+        display:none;
+    }
  }
 }
+
+
+ 
 `;

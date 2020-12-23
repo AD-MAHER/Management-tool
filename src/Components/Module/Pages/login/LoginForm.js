@@ -21,12 +21,13 @@ export default function LoginForm() {
                 <Input1  name="Password" label="Password"
                     rules={[{ required: true, message: 'Please input your password!' }]}
                     input={<Input />} />
-                <div className="Forgot"><NavLink className='F1' to="/forgot_pass">Forgot Password?</NavLink></div>
+                <div className="Forgot"><NavLink className='F1' to="/req_otp">Forgot Password?</NavLink></div>
                 <br />
+                <NavLink to="/layout_1" >
                 <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
                     className="button_css"
                     type='button'>Login_Now</Button1>
-
+                    </NavLink>
 
             </Form>
 

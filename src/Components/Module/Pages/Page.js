@@ -1,12 +1,20 @@
 import React from 'react'
 import LoginPage from './login/LoginPage';
-import { BrowserRouter } from "react-router-dom";
+import Layout1 from '../../Layout/Layout1';
+import { Switch, Route } from "react-router-dom";
 export default function Page() {
     return (
-        <BrowserRouter>
-            <div>
-                <LoginPage />
-            </div>
-        </BrowserRouter>
+
+        <div>
+
+
+
+            <Switch>
+                <Route path="/" exact component={LoginPage}/>
+                <Route path='/layout_1'  component={Layout1} />
+            </Switch>
+
+        </div>
+
     )
 }

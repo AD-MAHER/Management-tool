@@ -6,7 +6,8 @@ import Zeronsec_Logo from '../../../../Core/Logo/Zeronsec_logo.svg';
 import LoginForm from './LoginForm';
 import Forgot_Password from './Login_Form/Forgot_Pass/Forgot_Password';
 import Verify_OTP from './Login_Form/Request_OTP/Verify_OTP';
-import NewPass from './Login_Form/New_Pass/New_Pass';
+import New_Pass from './Login_Form/New_Pass/New_Pass';
+import Layout1 from '../../../Layout/Layout1';
 import { Switch, Route } from 'react-router-dom';
 export default function LoginPage() {
     return (
@@ -35,13 +36,13 @@ export default function LoginPage() {
                         <Col span={12} className="right_div">
                           
                             <Switch >
-
-                                <Route path='/' exact component={LoginForm} />
-                                <Route path='/forgot_pass' component={Forgot_Password} />
-                                <Route path='/req_OTP' component={Verify_OTP} />
-                                <Route path='/verify_OTP' component={NewPass} />
+                           
                                 <Route path='/' component={LoginForm} />
-
+                                <Route path='/req_otp' component={Forgot_Password} />
+                                <Route path='/verify_otp' component={Verify_OTP} />
+                                <Route path='/new_pass' component={New_Pass} />
+                                <Route path='/' component={LoginForm} />
+                                
 
                             </Switch>
 
@@ -53,6 +54,9 @@ export default function LoginPage() {
 
                 </Layout>
             </LoginStyle>
+            
         </div>
+        
+        
     )
 }
