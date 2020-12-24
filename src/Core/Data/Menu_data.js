@@ -8,7 +8,7 @@ export const menus=[
         //render icon key
         iconName:"usersMenu",
         //apply Link using this variable, 
-        routingPath:"/"
+        routingPath:"/users"
     },
     {
         key:"userGroups",

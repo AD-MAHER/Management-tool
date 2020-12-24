@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 export const SiderStyle = styled.div` 
+
  height:100%;
  background-color: #1B1616 ;
            

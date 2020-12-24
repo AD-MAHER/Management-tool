@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-export const HeaderStyle = styled.div` 
+export const HeaderStyle = styled.div`
+ 
 .ant-layout-header{
 background-color: #2B2B2B;
 color : #FFFFFF;

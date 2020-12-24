@@ -8,12 +8,12 @@ import { HeaderStyle } from './Header/HeaderStyle';
 import { SiderStyle } from './Sider/SiderStyle';
 import { FooterStyle } from './Footer/FooterStyle';
 import { ContentStyle } from './Content/ContentStyle';
-//import User from "../Module/Pages/User/Users";
 
 
-const { Header, Footer, Sider, Content } = Layout;
 
-export default function Layout1() {
+const { Header, Sider, Content } = Layout;
+
+export default function Layout1(props) {
   return (
     <>
  
@@ -28,7 +28,7 @@ export default function Layout1() {
             <ContentStyle>
               <Content  >
 
-                <Content1 />
+                <Content1 >{props.children}</Content1>
 
 
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const UserStyle = styled.div` 
+export const BlogStyle = styled.div` 
 padding:15px 15px ;
 .title-user{
    font-style:roboto;
@@ -9,8 +9,6 @@ padding:15px 15px ;
    letter-spacing:0.75px;
 
 }
-
-
 
 .ant-btn{
     float:right;

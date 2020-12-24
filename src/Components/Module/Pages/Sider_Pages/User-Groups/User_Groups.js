@@ -1,9 +1,13 @@
 import React from 'react'
 import { UserGroupStyle } from './UserGroupStyle';
 import { Button } from 'antd';
+import Layout1 from '../../../../Layout/Layout1';
 
-export default function User_Groups() {
+
+export default function User_Groups(props) {
     return (
+        <Layout1 {...props}>
+       
         <div>
             <UserGroupStyle>
 
@@ -20,5 +24,6 @@ export default function User_Groups() {
             </UserGroupStyle>
 
         </div>
+        </Layout1>
     )
 }

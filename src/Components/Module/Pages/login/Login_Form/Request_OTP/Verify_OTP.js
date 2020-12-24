@@ -21,9 +21,9 @@ export default function Verify_OTP(props) {
 
                 <Form className="FormClass">
 
-                    <Input1  name="Enter OTP" label="Enter OTP" rules={[{ required: true, message: 'OTP' }
+                    <Input1 maxLength={6} name="Enter OTP" label="Enter OTP" rules={[{ required: true, message: 'OTP' } 
                    
-                    ]} input={<Input />} />
+                    ]} pattern="[0-9]*" input={<Input />} />
 
                         <NavLink to="/new_pass">
                     <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"

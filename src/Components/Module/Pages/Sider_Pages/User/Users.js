@@ -1,9 +1,11 @@
 import React from 'react'
 import { UserStyle } from './UserStyle';
 import { Button } from 'antd';
+import Layout1 from '../../../../Layout/Layout1';
 
-export default function Users() {
+export default function Users(props) {
     return (
+        <Layout1 {...props}>
         <div>
             <UserStyle>
 
@@ -20,5 +22,6 @@ export default function Users() {
             </UserStyle>
 
         </div>
+        </Layout1>
     )
 }
