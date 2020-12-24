@@ -8,50 +8,46 @@ import { HeaderStyle } from './Header/HeaderStyle';
 import { SiderStyle } from './Sider/SiderStyle';
 import { FooterStyle } from './Footer/FooterStyle';
 import { ContentStyle } from './Content/ContentStyle';
+//import User from "../Module/Pages/User/Users";
+
 
 const { Header, Footer, Sider, Content } = Layout;
 
 export default function Layout1() {
   return (
-    <div>
+    <>
+ 
+        <Layout style={{ height: "100vh" }}>
+          <HeaderStyle>
+            <Header><Header1 /></Header></HeaderStyle>
+          <Layout>
+            <SiderStyle>
+              <Sider collapsed><Sider1 /></Sider>
+            </SiderStyle>
 
-      <Layout>
-        <Header1 />
-      </Layout>
+            <ContentStyle>
+              <Content  >
 
-
-
-      <Layout >
-        <Sider1 />
-        
-      </Layout>
-
-<Layout><Footer1 /></Layout>
-      {/* <Layout>
-
-      <HeaderStyle>
-      <Header><Header1 /></Header>
-      </HeaderStyle>
-
-      <Layout>
-        
-        <SiderStyle>
-        <Sider collapsed><Sider1 /></Sider>
-        
-        </SiderStyle>
-
-        <ContentStyle>
-        <Content><Content1 /></Content>
-        </ContentStyle>
-
-      </Layout>
-
-      <FooterStyle><Footer1 /></FooterStyle>
-
-    </Layout> */}
+                <Content1 />
 
 
 
-    </div>
+
+              </Content>
+            </ContentStyle>
+
+          </Layout>
+
+          <FooterStyle>
+         
+              <Footer1 />
+           
+          </FooterStyle>
+
+        </Layout>
+      
+
+
+    </>
   )
 }

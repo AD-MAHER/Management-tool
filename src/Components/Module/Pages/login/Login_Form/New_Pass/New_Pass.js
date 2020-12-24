@@ -5,10 +5,11 @@ import Button1 from '../../../../globalComponents/Button/Button1';
 import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import { NavLink } from "react-router-dom";
 import {ArrowLeftOutlined} from '@ant-design/icons';
-export default function New_Pass() {
+import LoginPage from '../../LoginPage';
+export default function New_Pass(props) {
   return (
     <>
-
+<LoginPage {...props}>
       <NewPassStyle>
      
         <div className="loginClass">
@@ -69,6 +70,7 @@ export default function New_Pass() {
 
         </div>
       </NewPassStyle>
+      </LoginPage>
     </>
   );
 }

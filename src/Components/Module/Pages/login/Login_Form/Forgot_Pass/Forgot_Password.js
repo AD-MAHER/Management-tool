@@ -7,11 +7,12 @@ import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import { ForgotStyle } from './ForgotStyle';
 import { NavLink } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
+import LoginPage from '../../LoginPage';
 
-export default function Forgot_Password() {
+export default function Forgot_Password(props) {
     return (
         <>
-        
+    <LoginPage  {...props}>
             <ForgotStyle>
             
                 <div className="loginClass">
@@ -38,6 +39,7 @@ export default function Forgot_Password() {
 
                 </div>
             </ForgotStyle>
+            </LoginPage>
         </>
     );
 }

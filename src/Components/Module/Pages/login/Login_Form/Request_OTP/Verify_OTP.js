@@ -6,11 +6,11 @@ import Button1 from '../../../../globalComponents/Button/Button1';
 import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import {NavLink} from "react-router-dom";
 import {ArrowLeftOutlined} from '@ant-design/icons';
-export default function Verify_OTP() {
+import LoginPage from '../../LoginPage';
+export default function Verify_OTP(props) {
     return (
         <>
-
-           
+<LoginPage {...props}>        
             <div className="loginClass">
             <NavLink to="/"><span><ArrowLeftOutlined  className="Icon_Class"/></span></NavLink> 
                 <img className="Logo2" src={Zeronsec_Logo} alt="Zeronsec" />
@@ -34,7 +34,7 @@ export default function Verify_OTP() {
                 </Form>
 
             </div>
-
+</LoginPage>   
         </>
     );
 }

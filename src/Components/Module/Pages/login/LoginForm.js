@@ -5,9 +5,12 @@ import Input1 from '../../globalComponents/FormComp/Input1';
 import Button1 from '../../globalComponents/Button/Button1';
 import Zeronsec_Logo from "../../../../Core/Logo/Zeronsec_logo.svg"
 import {NavLink} from "react-router-dom";
-export default function LoginForm() {
+import LoginPage from './LoginPage';
+export default function LoginForm(props) {
     return (
+        <LoginPage  {...props}>
         <div className="loginClass">
+
 
             <img className="Logo2" src={Zeronsec_Logo} alt="Zeronsec" />
             <h3 className="Head1">Welcome back</h3>
@@ -23,7 +26,7 @@ export default function LoginForm() {
                     input={<Input />} />
                 <div className="Forgot"><NavLink className='F1' to="/req_otp">Forgot Password?</NavLink></div>
                 <br />
-                <NavLink to="/layout_1" >
+                <NavLink to="/layout1" >
                 <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
                     className="button_css"
                     type='button'>Login_Now</Button1>
@@ -32,5 +35,6 @@ export default function LoginForm() {
             </Form>
 
         </div>
+        </LoginPage>
     )
 }

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 export const HeaderStyle = styled.div` 
 .ant-layout-header{
-background-color: #222222;
+background-color: #2B2B2B;
 color : #FFFFFF;
 
-
 }
+
 .Header_Logo{
         margin-top:0.5%;
         margin-left:-3%;

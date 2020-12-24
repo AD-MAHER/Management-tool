@@ -8,8 +8,8 @@ import Forgot_Password from './Login_Form/Forgot_Pass/Forgot_Password';
 import Verify_OTP from './Login_Form/Request_OTP/Verify_OTP';
 import New_Pass from './Login_Form/New_Pass/New_Pass';
 import Layout1 from '../../../Layout/Layout1';
-import { Switch, Route } from 'react-router-dom';
-export default function LoginPage() {
+import { Switch, Route , Redirect} from 'react-router-dom';
+export default function LoginPage(props) {
     return (
         <div>
             <LoginStyle>
@@ -35,17 +35,8 @@ export default function LoginPage() {
 
                         <Col span={12} className="right_div">
                           
-                            <Switch >
-                           
-                                <Route path='/' component={LoginForm} />
-                                <Route path='/req_otp' component={Forgot_Password} />
-                                <Route path='/verify_otp' component={Verify_OTP} />
-                                <Route path='/new_pass' component={New_Pass} />
-                                <Route path='/' component={LoginForm} />
-                                
-
-                            </Switch>
-
+                            
+                            {props.children}
                         </Col>
                     </Row>
 
