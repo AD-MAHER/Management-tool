@@ -4,13 +4,14 @@ import 'antd/dist/antd.css';
 import { GlobalStyle } from "./GlobalStyle";
 
 function App() {
+ 
   return (
-   
-      <div >
-        <GlobalStyle>
-          <Page />
-        </GlobalStyle>
-      </div>
+
+    <div >
+      <GlobalStyle>
+        <Page />
+      </GlobalStyle>
+    </div>
 
   );
 }

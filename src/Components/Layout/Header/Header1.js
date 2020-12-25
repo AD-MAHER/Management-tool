@@ -10,11 +10,13 @@ export default function Header1() {
             <HeaderStyle>
                
                   
-
+            <div className="logo-div">
                         <img className="Header_Logo" src={Zeronsec_Logo} alt="Zeronsec" />
 
-
+</div>
+                        <div className="avatar-div">
                         <Avatar>AD</Avatar>
+                        </div>
 
 
                   

@@ -1,154 +1,154 @@
 // sample 15 posts data
 
-export const Blog_Post = [
+export const Post = [
     {
-        token:"1",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "1",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author:"  John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg:"../Images/img1.png",   
+     },
+    {
+        token: "2",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
+        //apply any static image and it's path here
+        coverImg: "../Images/img1.png"
     },
     {
-        token:"2",
-        title:"Sample Post For Long Name Tooltip Test By Demo User Created Title Name Post",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "3",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg:"../Images/img1.png"
     },
     {
-        token:"3",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "4",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "../Images/img1.png"
     },
     {
-        token:"4",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "5",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg:"../Images/img1.png"
     },
     {
-        token:"5",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "6",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "../Images/img1.png"
     },
     {
-        token:"6",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "7",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     },
     {
-        token:"7",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "8",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     },
     {
-        token:"8",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "9",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     },
     {
-        token:"9",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "10",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     },
     {
-        token:"10",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "11",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     },
     {
-        token:"11",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "12",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     },
     {
-        token:"12",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "13",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     },
     {
-        token:"13",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "14",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     },
     {
-        token:"14",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
+        token: "15",
+        title: "Sample Post One",
+        description: "This Post is created for sample data test",
+        author: "John Dao",
+        createdTime: "02 Jul 2020, 06:33",
+        hashtags: "tag1,sampletag2,reactjs,usecase1",
         //apply any static image and it's path here
-        coverImg:"./image/cover.png"
-    },
-    {
-        token:"15",
-        title:"Sample Post One",
-        description:"This Post is created for sample data test",
-        author:"John Dao",
-        createdTime:"02 Jul 2020, 06:33",
-        hashtags:"tag1,sampletag2,reactjs,usecase1",
-        //apply any static image and it's path here
-        coverImg:"./image/cover.png"
+        coverImg: "./image/cover.png"
     }
 ]

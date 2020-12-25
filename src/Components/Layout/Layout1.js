@@ -14,38 +14,43 @@ import { ContentStyle } from './Content/ContentStyle';
 const { Header, Sider, Content } = Layout;
 
 export default function Layout1(props) {
+
   return (
     <>
- 
-        <Layout style={{ height: "100vh" }}>
-          <HeaderStyle>
-            <Header><Header1 /></Header></HeaderStyle>
-          <Layout>
-            <SiderStyle>
-              <Sider collapsed><Sider1 /></Sider>
-            </SiderStyle>
 
-            <ContentStyle>
-              <Content  >
+      <Layout style={{ height: "100vh" , width:"100vw" }}>
+        <HeaderStyle>
+          <Header ><Header1 /></Header></HeaderStyle>
+        <Layout   >
+          <SiderStyle >
+            <Sider collapsed collapsedWidth={62} ><Sider1 /></Sider>
+          </SiderStyle>
 
-                <Content1 >{props.children}</Content1>
+          <ContentStyle>
+
+            <Content  >
+
+              <Content1 >
+
+              </Content1>
 
 
 
 
-              </Content>
-            </ContentStyle>
+            </Content>
 
-          </Layout>
-
-          <FooterStyle>
-         
-              <Footer1 />
-           
-          </FooterStyle>
+          </ContentStyle>
 
         </Layout>
-      
+
+        <FooterStyle >
+
+          <Footer1 />
+
+        </FooterStyle>
+
+      </Layout>
+
 
 
     </>

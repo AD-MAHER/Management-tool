@@ -17,7 +17,8 @@ export default function Sider1() {
                     <Menu >
                   {menus.map((menu)=>{
                       return(
-                      <Menu.Item key={menu.key} icon={<a href={menu.routingPath}> <Icons type={menu.iconName}/></a>}>
+                      <Menu.Item key={menu.key} icon={<a href={menu.routingPath}> 
+                      <Icons type={menu.iconName}/></a>}>
                           <NavLink to={menu.routingPath}>
                           {menu.name}
                           </NavLink>

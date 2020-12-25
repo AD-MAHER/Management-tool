@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 export const FooterStyle = styled.div` 
 
-
+z-index:1000;
 
 
 .Footer_Content{
+
                     text-style: roboto;
                     font-size:12px;
                     color:#E5E5E5;

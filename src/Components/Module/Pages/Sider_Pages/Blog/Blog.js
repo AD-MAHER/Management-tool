@@ -1,33 +1,74 @@
 import React from 'react'
 import { BlogStyle } from './BlogStyle';
 import { Button } from 'antd';
-import Blog_Post from '../../../../../Core/Data/Blog_Post';
-import Layout1 from '../../../../Layout/Layout1';
+import { Post } from '../../../../../Core/Data/Blog_Post';
+import amd from '../../../../../Core/Images/img1.png';
+import { Row } from 'antd';
+import { Card } from 'antd';
 
-export default function Users(props) {
+const { Meta } = Card;
+
+
+
+export default function Users() {
+    const authicon = (<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 0C2.90927 0 0 2.68548 0 6C0 9.31452 2.90927 12 6.5 12C10.0907 12 13 9.31452 13 6C13 2.68548 10.0907 0 6.5 0ZM6.5 2.32258C7.77379 2.32258 8.80645 3.27581 8.80645 4.45161C8.80645 5.62742 7.77379 6.58065 6.5 6.58065C5.22621 6.58065 4.19355 5.62742 4.19355 4.45161C4.19355 3.27581 5.22621 2.32258 6.5 2.32258ZM6.5 10.6452C4.96149 10.6452 3.58286 10.0016 2.66028 8.99516C3.15302 8.13871 4.11754 7.54839 5.24194 7.54839C5.30484 7.54839 5.36774 7.55806 5.42802 7.575C5.76875 7.67661 6.1252 7.74194 6.5 7.74194C6.8748 7.74194 7.23387 7.67661 7.57198 7.575C7.63226 7.55806 7.69516 7.54839 7.75806 7.54839C8.88246 7.54839 9.84698 8.13871 10.3397 8.99516C9.41714 10.0016 8.03851 10.6452 6.5 10.6452Z" fill="#88CDFF" />
+    </svg>)
+
+    const deleteicon = (<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.64286 0.687504H6.96429L6.75446 0.285746C6.71002 0.199854 6.64155 0.127604 6.55677 0.0771237C6.47198 0.0266431 6.37425 -6.50539e-05 6.27455 3.76679e-06H3.72321C3.62375 -0.000364272 3.52618 0.0262443 3.4417 0.0767811C3.35721 0.127318 3.28923 0.199738 3.24554 0.285746L3.03571 0.687504H0.357143C0.262423 0.687504 0.171582 0.72372 0.104605 0.788186C0.0376275 0.852651 0 0.940085 0 1.03125L0 1.71875C0 1.80992 0.0376275 1.89736 0.104605 1.96182C0.171582 2.02629 0.262423 2.0625 0.357143 2.0625H9.64286C9.73758 2.0625 9.82842 2.02629 9.8954 1.96182C9.96237 1.89736 10 1.80992 10 1.71875V1.03125C10 0.940085 9.96237 0.852651 9.8954 0.788186C9.82842 0.72372 9.73758 0.687504 9.64286 0.687504ZM1.1875 10.0332C1.20453 10.295 1.32459 10.5407 1.52323 10.7204C1.72186 10.9 1.98415 11 2.2567 11H7.7433C8.01585 11 8.27814 10.9 8.47677 10.7204C8.67541 10.5407 8.79547 10.295 8.8125 10.0332L9.28571 2.75H0.714286L1.1875 10.0332Z" fill="#88CDFF" />
+    </svg>)
+
+    const editicon = (<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.6971 3.05144L9.70658 4.04191C9.6056 4.14289 9.44231 4.14289 9.34133 4.04191L6.95645 1.65705C6.85547 1.55607 6.85547 1.39278 6.95645 1.2918L7.94693 0.30133C8.34871 -0.100443 9.00186 -0.100443 9.40579 0.30133L10.6971 1.59259C11.101 1.99437 11.101 2.64752 10.6971 3.05144ZM6.10563 2.14261L0.463575 7.78464L0.00808505 10.3951C-0.0542225 10.7474 0.253018 11.0525 0.605378 10.9924L3.21585 10.5347L8.85791 4.89272C8.95889 4.79174 8.95889 4.62846 8.85791 4.52748L6.47303 2.14261C6.3699 2.04163 6.20661 2.04163 6.10563 2.14261ZM2.66583 7.30122C2.54766 7.18305 2.54766 6.99398 2.66583 6.87581L5.97457 3.56709C6.09274 3.44892 6.28181 3.44892 6.39998 3.56709C6.51815 3.68525 6.51815 3.87432 6.39998 3.99249L3.09124 7.30122C2.97307 7.41939 2.78399 7.41939 2.66583 7.30122ZM1.8902 9.10813H2.9215V9.88804L1.53569 10.1308L0.8675 9.46263L1.11028 8.07683H1.8902V9.10813Z" fill="#88CDFF" />
+    </svg>
+    )
+    const post1 = Post
     return (
-        <Layout1 {...props}>
-            <div>
-                <BlogStyle>
+
+        <div >
+            <BlogStyle>
+
+                <div >
 
                     <div >
-
-                        <div>
- <span className='title-user'>Blog Posts</span>
- <span className="create-button">  <Button type="primary">Create</Button></span>
-
-                        </div>
-                        <hr className="border-class" />
-                    </div>
-
-                    <div>
-
-
+                        <span className='title-user'>Blog Posts</span>
+                        <span className="create-button">  <Button type="primary">Create</Button></span>
 
                     </div>
-                </BlogStyle>
+                    <hr className="border-class" />
+                </div>
 
-            </div>
-        </Layout1>
+                <div style={{ overflowY: "scroll" }} className="scrollClass">
+                    <Row>
+                        {post1.map((i) => {
+                            console.log(i)
+                            return (
+
+
+                                <Card
+
+                                    hoverable
+                                    
+                                    cover={<img alt="example" src={amd} />}
+                                    token={i.token}
+
+                                >
+                                <Meta title={i.title} description={i.createdTime} />
+                              
+                                        <span className="auther-class">{authicon} {i.author}</span>
+                                        <span className="icon-class">{editicon}   {deleteicon}</span>
+                                   
+                                </Card>
+                            )
+                        })}
+
+                    </Row>
+                </div>
+
+            </BlogStyle>
+
+        </div>
+
     )
 }

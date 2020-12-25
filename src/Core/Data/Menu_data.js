@@ -8,30 +8,30 @@ export const menus=[
         //render icon key
         iconName:"usersMenu",
         //apply Link using this variable, 
-        routingPath:"/users"
+        routingPath:"/layout1/"
     },
     {
         key:"userGroups",
         name:"User Groups",
         iconName:"groupsMenu",
-        routingPath:"/groups"
+        routingPath:"/layout1/groups"
     },
     {
         key:"blog",
         name:"Blog",
         iconName:"blogMenu",
-        routingPath:"/blog"
+        routingPath:"/layout1/blog"
     },
     {
         key:"chatroom",
         name:"Chatroom",
         iconName:"chatroomMenu",
-        routingPath:"/chatroom"
+        routingPath:"/layout1/chatroom"
     },
     {
         key:"taskmanagement",
         name:"Task Management",
         iconName:"taskmanagementMenu",
-        routingPath:"/taskmanagement"
+        routingPath:"/layout1/taskmanagement"
     },
 ]

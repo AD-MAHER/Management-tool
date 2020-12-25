@@ -3,9 +3,9 @@ import { UserStyle } from './UserStyle';
 import { Button } from 'antd';
 import Layout1 from '../../../../Layout/Layout1';
 
-export default function Users(props) {
+export default function Users() {
     return (
-        <Layout1 {...props}>
+       
         <div>
             <UserStyle>
 
@@ -22,6 +22,6 @@ export default function Users(props) {
             </UserStyle>
 
         </div>
-        </Layout1>
+        
     )
 }

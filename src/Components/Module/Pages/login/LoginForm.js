@@ -7,6 +7,8 @@ import Zeronsec_Logo from "../../../../Core/Logo/Zeronsec_logo.svg"
 import {NavLink} from "react-router-dom";
 import LoginPage from './LoginPage';
 export default function LoginForm(props) {
+   
+    
     return (
         <LoginPage  {...props}>
         <div className="loginClass">
@@ -27,7 +29,7 @@ export default function LoginForm(props) {
                 <div className="Forgot"><NavLink className='F1' to="/req_otp">Forgot Password?</NavLink></div>
                 <br />
                 <NavLink to="/layout1" >
-                <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
+                <Button1  buttonStyle="btn-success-solid" buttonSize="btn-medium"
                     className="button_css"
                     type='button'>Login_Now</Button1>
                     </NavLink>
