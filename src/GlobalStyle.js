@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const GlobalStyle = styled.div` 
-  
+
 
         .ant-tooltip-open{
          background-color:#1E1C1C;
@@ -15,10 +15,24 @@ export const GlobalStyle = styled.div`
                 fill: #57A1D8;
                  }
         }
-         .ant-menu-item a:hover{
+         ${'' /* .ant-menu-item a:hover{
                 svg path{
                     fill: #57A1D8;
                 }
+         } */}
+                
+
+                ${'' /* .ant-card-hoverable{
+                    cursor: auto;
+    -webkit-transition: border-color 5s, -webkit-box-shadow 5s;
+    transition: border-color 5s, -webkit-box-shadow 5s;
+    transition: box-shadow 5s, border-color 5s;
+    transition: box-shadow 5s, border-color 5s, -webkit-box-shadow 5s;
+    background-color:yellow;
+    a:hover {
+  background-color: yellow;
+}
+                } */}
 
 
 

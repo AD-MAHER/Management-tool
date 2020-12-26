@@ -14,6 +14,7 @@ padding:15px 15px ;
    height: 70vh;
   ::-webkit-scrollbar {
  width: 3px;
+ 
 }
 ::-webkit-scrollbar-thumb {
  background: #429FE4; 
@@ -63,12 +64,16 @@ background:#E5E5E5;
    
 }
 
+
+
 .ant-card-meta{
 margin-top:-25px;
 margin-left:-10px;
 }
       .ant-card-meta-title{
         
+         overflow: hidden;
+      text-overflow: ellipsis;
          font-style:Roboto;
          font-size: 16;
          color:#FFFFFF;
@@ -108,10 +113,26 @@ margin-left:-10px;
                               width:250px;
                               margin-top:0px;
                               
-                              margin-right:0px;
-                              margin-left:0px;
+                              margin-right:3px;
+                              margin-left:3px;
                               background: #2D3236;
                            }
                                           }
+   @media only screen and (max-width: 320px) {
+
+
+.scrollClass{
+            height: 72vh;
+            }
+.ant-card{
+   padding:2px;
+            width:250px;
+            margin-top:0px;
+            
+            margin-right:0px;
+            margin-left:0px;
+            background: #2D3236;
+         }
+                        }
 
 `;

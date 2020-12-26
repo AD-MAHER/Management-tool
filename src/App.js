@@ -7,11 +7,11 @@ function App() {
  
   return (
 
-    <div >
+    <>
       <GlobalStyle>
         <Page />
       </GlobalStyle>
-    </div>
+    </>
 
   );
 }

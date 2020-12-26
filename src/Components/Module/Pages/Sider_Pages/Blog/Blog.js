@@ -4,8 +4,8 @@ import { Button } from 'antd';
 import { Post } from '../../../../../Core/Data/Blog_Post';
 import amd from '../../../../../Core/Images/img1.png';
 import { Row } from 'antd';
-import { Card } from 'antd';
-
+import { Card , Tooltip} from 'antd';
+import Modal1 from '../../../globalComponents/Modal/Modal1';
 const { Meta } = Card;
 
 
@@ -33,7 +33,7 @@ export default function Users() {
 
                     <div >
                         <span className='title-user'>Blog Posts</span>
-                        <span className="create-button">  <Button type="primary">Create</Button></span>
+                        <span className="create-button"> <Modal1 type="primary"></Modal1></span>
 
                     </div>
                     <hr className="border-class" />
@@ -45,21 +45,22 @@ export default function Users() {
                             console.log(i)
                             return (
 
-
+                                <Tooltip placement="bottomRight" title={i.title}>   
                                 <Card
 
                                     hoverable
                                     
                                     cover={<img alt="example" src={amd} />}
-                                    token={i.token}
-
+                                    token={i.token}   
                                 >
                                 <Meta title={i.title} description={i.createdTime} />
                               
                                         <span className="auther-class">{authicon} {i.author}</span>
                                         <span className="icon-class">{editicon}   {deleteicon}</span>
-                                   
+                                        
                                 </Card>
+                                </Tooltip>
+                                
                             )
                         })}
 

@@ -13,7 +13,7 @@ export const Post = [
      },
     {
         token: "2",
-        title: "Sample Post One",
+        title: "Sample Post One jhbffgihag aidughepruhfusigrhguiai",
         description: "This Post is created for sample data test",
         author: "John Dao",
         createdTime: "02 Jul 2020, 06:33",
