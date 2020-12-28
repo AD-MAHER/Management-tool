@@ -15,7 +15,7 @@ z-index:1000;
                     text-align:center;
                     color : #E5E5E5;
                     height:25px;
-                    
+                    font-family: 'Roboto', sans-serif;
                     }
 
                     

@@ -8,9 +8,9 @@ function App() {
   return (
 
     <>
-      <GlobalStyle>
+      <GlobalStyle />
         <Page />
-      </GlobalStyle>
+    
     </>
 
   );

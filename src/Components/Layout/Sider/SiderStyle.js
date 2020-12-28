@@ -5,18 +5,18 @@ export const SiderStyle = styled.div`
  min-width:64px;
     max-width:64px;
  background-color: #1B1616 ;
- 
+ font-family: 'Roboto', sans-serif;
            
 .ant-layout{
     background-color: #1B1616 ;
-  
+    font-family: 'Roboto', sans-serif;
       
 }
 
 
         .ant-menu{
             background-color: #1B1616 ;
-            
+            font-family: 'Roboto', sans-serif;
             border:none;
             text-align: center;
             margin-bottom:3px;
@@ -35,7 +35,8 @@ export const SiderStyle = styled.div`
             margin-bottom: 1px;
             text-align:center;
             min-width:60px;
-    max-width:60px;
+            max-width:60px;
+            font-family: 'Roboto', sans-serif;
             
         }  
         .ant-menu-vertical > .ant-menu-item, .ant-menu-vertical-left > .ant-menu-item, .ant-menu-vertical-right > .ant-menu-item, .ant-menu-inline > .ant-menu-item, .ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title{
@@ -47,8 +48,8 @@ export const SiderStyle = styled.div`
             text-align:center;
             padding-right:23px;
             min-width:60px;
-    max-width:60px;
-             
+            max-width:60px;
+            font-family: 'Roboto', sans-serif;
 
         }
         .ant-menu-item-selected{
@@ -66,7 +67,7 @@ export const SiderStyle = styled.div`
         }
         .ant-tooltip-open{
          background-color:#1E1C1C;
-            font-style : roboto;
+         font-family: 'Roboto', sans-serif;
             color:#B9B9B9;
             letter-spacing : 0.65px;
         }

@@ -8,8 +8,8 @@ import { HeaderStyle } from './Header/HeaderStyle';
 import { SiderStyle } from './Sider/SiderStyle';
 import { FooterStyle } from './Footer/FooterStyle';
 import { ContentStyle } from './Content/ContentStyle';
-
-
+import { Provider } from "react-redux";
+import store from "../../Core/Redux/Store";
 
 const { Header, Sider, Content } = Layout;
 
@@ -17,41 +17,41 @@ export default function Layout1(props) {
 
   return (
     <>
+      <Provider store={store}>
+        <Layout style={{ height: "100vh", width: "100vw" }}>
+          <HeaderStyle>
+            <Header ><Header1 /></Header></HeaderStyle>
+          <Layout   >
+            <SiderStyle >
+              <Sider collapsed collapsedWidth={62} ><Sider1 /></Sider>
+            </SiderStyle>
 
-      <Layout style={{ height: "100vh" , width:"100vw" }}>
-        <HeaderStyle>
-          <Header ><Header1 /></Header></HeaderStyle>
-        <Layout   >
-          <SiderStyle >
-            <Sider collapsed collapsedWidth={62} ><Sider1 /></Sider>
-          </SiderStyle>
+            <ContentStyle>
 
-          <ContentStyle>
+              <Content  >
 
-            <Content  >
+                <Content1 >
 
-              <Content1 >
-
-              </Content1>
-
-
+                </Content1>
 
 
-            </Content>
 
-          </ContentStyle>
+
+              </Content>
+
+            </ContentStyle>
+
+          </Layout>
+
+          <FooterStyle >
+
+            <Footer1 />
+
+          </FooterStyle>
 
         </Layout>
 
-        <FooterStyle >
-
-          <Footer1 />
-
-        </FooterStyle>
-
-      </Layout>
-
-
+      </Provider>
 
     </>
   )

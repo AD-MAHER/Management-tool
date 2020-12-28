@@ -5,74 +5,13 @@
  
 }
 
-div.ant-modal{
-
-  /* background: blur(8px); */
-}
-  
-div.ant-modal-header{
-  background-color:#303234;
-  border:none;
-  text-align:center;
- 
-}
-
-div.ant-modal-title{
-  color:#8FA8BA;
-  letter-spacing:0.75px;
-  border:none;
-}
-
-div.ant-modal-body{
-  background-color: #292A2B;
-  border:none;
-  color:#8FA8BA;
-  letter-spacing:0.75px;
-}
-
-div.ant-modal-footer{
-  background-color:#303234;
-  border:none;
-}
-.ant-input:placeholder-shown {
-  text-overflow: ellipsis;
- 
-  color:#979797;
-  letter-spacing: 0.35px;
- 
-
-}
-
-.ant-input{
-  background-color:#222222;
-  color:#E5E5E5;
-  border:#E8E8E8 ;
- opacity:17%;
-}
-
-.ant-upload-list-picture{
-  border-radius: 8px;
-  background-color: #222222;
-  border:none;
-}
-.ant-upload-list-item-error{
-  border:none;
-}
 
 
-div.ant-upload-list-item {
-  /* animation: none; */
-  height: 12px;
-  padding: 8px;
-  border: none;
-  border-radius: 8px;
-}
 
-
-/* back-color: 303234
+ /* back-color: 303234
     Header-title-text: Roboto, 14, 8FA8BA, letter-pacing:0.75px
-    Close icon color: 9EA4A9 */
-
+    Close icon color: 9EA4A9 
+  */
 
 
 
