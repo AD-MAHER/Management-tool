@@ -2,6 +2,7 @@ import styled from 'styled-components';
 export const BlogStyle = styled.div` 
 padding:1% 1% ;
 
+
 .title-user{
    font-style:roboto;
    font-weight:bold;

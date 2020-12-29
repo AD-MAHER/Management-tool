@@ -6,9 +6,6 @@ import New_Pass from './login/Login_Form/New_Pass/New_Pass';
 import Layout1 from '../../Layout/Layout1';
 import { Switch, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-// import Users from './Sider_Pages/User/Users';
-// import User_Groups from './Sider_Pages/User-Groups/User_Groups';
-// import  Blog  from './Sider_Pages/Blog/Blog';
 import { PageStyle } from './PageStyle';
 
 export default function Page() {
@@ -25,10 +22,6 @@ export default function Page() {
                         <Route path='/verify_otp' component={Verify_OTP} />
                         <Route path='/new_pass' component={New_Pass} />
                         <Route path='/layout1' component={Layout1} />
-
-
-
-
 
 
                     </Switch>

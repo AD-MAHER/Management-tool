@@ -3,6 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
 
+.ant-card:hover{
+background:#526676;
+}
+.ant-modal-close-x{
+    
+}
        
         .ant-menu-item-selected{
                 border:1px solid #394D5C;
@@ -15,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
         .ant-modal-wrap {
                   z-index: 1000;
                   margin-top:-05%;
-                overflow:hidden;
+                overflow:auto;
            
                 }
 
@@ -164,7 +170,67 @@ export const GlobalStyle = createGlobalStyle`
        }
 
 }
+
+.ant-modal-mask {
+    position: fixed;
+    box-sha
+    height: 100%;
+    background-color: transparent;
+}
+.ant-modal-body{
+           background:#292A2B;
+           
+               
+                .postheader{
+                        span{
+                           color:#FFFFFF;
+                           font-size:16px;
+                           letter-spacing:0.75px;
+                           font-family: Roboto;
+                        }
+                        }
+                 .postPhoto{
+                     margin-top: 10px;
+                 }
+                 .PostHeading{
+                         color:#88CDFF;
+                         letter-spacing:0.75px;
+                         font-size: 12px;
+                         font-family: Roboto;
+                     }
+                 .PostRdata{
+                     
+                     p{
+                        color:#E5E5E5;
+                        letter-spacing:0.75px;
+                        font-size:11px;
+                        font-family:Roboto;
+                     }
+                 }       
+                 .PostDesc{
+                        margin-top: 20px;
+                        p{
+                            color:#E5E5E5;
+                        letter-spacing:0.75px;
+                        font-size:12px;
+                        font-family:Roboto;
+                        text-align: left;
+                        }
+                 }
+                 .ant-tag{
+                    background-color:#222222;
+                        border-radius:8px;
+                    color:#8FA8BA;
+                    font-size:11px;
+                    font-family:Roboto;
+                    letter-spacing:0.75px;
+                    border:none;
+                 }
        @media only screen and (max-width: 768px) {
+
+           .postPhoto{
+               display:none;
+           }
         .ant-modal-wrap {
                   z-index: 1000;
                   margin-top:0;

@@ -4,9 +4,9 @@ import {NavLink} from "react-router-dom";
 import { SiderStyle } from './SiderStyle';
 import {menus} from '../../../Core/Data/Menu_data';
 import Icons from "../../Module/globalComponents/Icon/Icons";
-
+// import { useSelector } from "react-redux";
 export default function Sider1() {
-    
+    // const menus = useSelector(state => state.menus)
     return (
         <>
             <SiderStyle>

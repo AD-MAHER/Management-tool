@@ -1,131 +1,15 @@
-// import React from 'react'
-// import { Modal, Button } from 'antd';
-// import {ModalStyle} from './ModalStyle.js';
-// import { Form, Input, message, Upload, Select } from "antd";
-
-
-    
-// const { TextArea } = Input;
-// const children = [];
-// function handleChange(value) {
-//   console.log(`selected ${value}`);
-// }
-
- 
-//  export default class Modal1 extends React.Component {
-//     state = {
-//         loading: false,
-//         visible: false,
-//       };
-
-    
-//       showModal = () => {
-//         this.setState({
-//           visible: true,
-//         });
-//       };
-    
-//       handleOk = () => {
-//         this.setState({ loading: true });
-//         setTimeout(() => {
-//           this.setState({ loading: false, visible: false });
-//         }, 3000);
-//       };
-    
-//       handleCancel = () => {
-//         this.setState({ visible: false });
-//       };
-    
-//       render() {
-//         const { visible, loading } = this.state;
-//         return (
-//           <>
-//           <ModalStyle>
-//             <Button type="primary" onClick={this.showModal}>
-//               Create
-//             </Button>
-//             <Modal
-//               visible={visible}
-//               title="New Post"
-//               onOk={this.handleOk}
-//               onCancel={this.handleCancel}
-//               footer={[
-                
-//                 <Button key="submit" type="primary" loading={loading} onClick={this.handleOk} onClick={this.handleCancel}>
-//                   Create
-//                 </Button>,
-//               ]}
-//             >
-             
-//              <Form
-//         className=" ant-form-vertical"
-//         name="basic"
-//         initialValues={{
-//           remember: true,
-//         }}
-//       >
-//         <Form.Item
-//           label="Post Title"
-//           name="PostTitle"
-//           rules={[
-//             {
-//               required: true,
-//               message: "Please input your Post Title!",
-//             },
-//           ]}
-//         >
-//           <Input placeholder="Enter Post Title" />
-//         </Form.Item>
-//         <Form.Item label="Post Cover Image">
-//           <Upload>
-//             <Button>Select</Button>
-//           </Upload>
-//         </Form.Item>
-//         <Form.Item label="Post Content">
-//           <TextArea
-//             rows={5}
-//             placeholder="Enter Post Content (This is resizable text area)"
-//           />
-//         </Form.Item>
-//         <Form.Item label="Attachments">
-//           <Upload >
-//             <Button>Select</Button>
-//           </Upload>
-//         </Form.Item>
-//         <Form.Item label="Hashtages">
-//           <Select
-//             mode="tags"
-//             style={{ width: "100%" }}
-//             placeholder="Tags Mode"
-//             onChange={handleChange}
-//           >
-//             {this.children}
-//           </Select>
-//         </Form.Item>
-//       </Form>
-//             </Modal>
-//             </ModalStyle>
-
-//           </>
-//         );
-//       }
-//     }
-
-
-
-    import React from "react";
-import { Form, Input, Button, message, Upload, Select } from "antd";
+import React, {useState} from "react";
+import { Form, Input, Button, message, Upload, Select , Modal} from "antd";
 
 const Modal1 = () => {
-    
+  const [postTitle , setpostTitle] = useState("") 
   const { TextArea } = Input;
   const children = [];
-  // for (let i = 10; i < 36; i++) {
-  //   children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
-  // }
+  
 
   function handleChange(value) {
-    console.log(`selected ${value}`);
+    
+    console.log(` ${value}`  );
   }
 
   const props = {
@@ -136,7 +20,7 @@ const Modal1 = () => {
     },
     onChange(info) {
       if (info.file.status !== "uploading") {
-        console.log(info.file, info.fileList);
+        console.log(info.file, info.fileList ,);
       }
       if (info.file.status === "done") {
         message.success(`${info.file.name} file uploaded successfully`);
@@ -145,8 +29,40 @@ const Modal1 = () => {
       }
     },
   };
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+
+    };
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+
+
+    };
   return (
     <>
+            <Button type="primary" onClick={showModal}>
+               Create
+           </Button>
+          <Modal
+              visible={isModalVisible}
+              title="New Post"
+              onOk={handleOk}
+              onCancel={handleCancel}
+              footer={[
+                
+                <Button key="submit" type="primary"  onClick={handleOk} >
+                  Create
+                </Button>,
+              ]}
+            >
+          
       <Form 
         xs sm md lg xl xxl
         className=" ant-form-vertical"
@@ -165,7 +81,7 @@ const Modal1 = () => {
             },
           ]}
         >
-          <Input placeholder="Enter Post Title" />
+          <Input value={postTitle}  placeholder="Enter Post Title" />
         </Form.Item>
         <Form.Item label="Post Cover Image">
           <Upload {...props}>
@@ -174,13 +90,14 @@ const Modal1 = () => {
         </Form.Item>
         <Form.Item label="Post Content">
           <TextArea
+          
             rows={5}
             placeholder="Enter Post Content (This is resizable text area)"
           />
         </Form.Item>
         <Form.Item label="Attachments">
           <Upload {...props}>
-            <Button>Select</Button>
+            <Button >Select</Button>
           </Upload>
         </Form.Item>
         <Form.Item label="Hashtages">
@@ -194,6 +111,7 @@ const Modal1 = () => {
           </Select>
         </Form.Item>
       </Form>
+      </Modal>
     </>
   );
 };
