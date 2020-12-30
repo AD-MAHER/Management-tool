@@ -1,7 +1,7 @@
 import React from 'react'
 import { UserGroupStyle } from './UserGroupStyle';
 import { Button } from 'antd';
-import Layout1 from '../../../../Layout/Layout1';
+import CreateGroupModal from '../../../globalComponents/Modal/Group Modal/CreateGroupModal';
 
 
 export default function User_Groups() {
@@ -15,7 +15,7 @@ export default function User_Groups() {
                     
                         <div>
                             <span className='title-user'>User Groups</span>
-                            <span className="create-button">  <Button type="primary">Create</Button></span>
+                            <span className="create-button"><CreateGroupModal/></span>
 
                         </div>
                    <hr className="border-class" />

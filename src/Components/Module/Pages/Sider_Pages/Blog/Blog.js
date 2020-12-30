@@ -72,12 +72,12 @@ export default function Blog() {
                                 
                                 <Tooltip key={index} placement="bottomRight" title={i.title}>
                                     <Card key={index}
-                                            onClick={showModal}
-                                        cover={<img alt="example" src={amd} />}
+                                            
+                                        cover={<img alt="example" src={amd} onClick={showModal}/>}
                                         token={i.token}
                                     >
                                      
-                                        <Meta title={i.title} description={i.createdTime} />
+                                        <Meta title={i.title} description={i.createdTime} onClick={showModal}/>
                                         <span className="auther-class">{authicon} {i.author}</span>
 
 
@@ -97,15 +97,16 @@ export default function Blog() {
                   >
                     <div className="ModalContent">
                       <div className="postheader">
-                        <span>{i.title}</span>
+                        <span>{i.title} for view</span>
                       </div>
                       <Row>
-                        <Col span={12}>
+                        <Col md={12 } xs={24 } >
                           <div className="postPhoto">
-                            <img src={amd} alt="img" />
+                            <img width="340" className="img1" src={amd} alt="img" />
+                            <img width="240" className="img2" src={amd} alt="img" />
                           </div>
                         </Col>
-                        <Col span={12}>
+                        <Col md={12 } xs={24 }>
                           <div className="PostRdata">
                             <span className="PostHeading">Created On:</span>
                             <p>{i.createdTime}</p>
@@ -116,6 +117,7 @@ export default function Blog() {
                           </div>
                         </Col>
                       </Row>
+                      <Row>
                       <div className="PostDesc">
                         <p>{i.description}</p>
                         <p>
@@ -136,6 +138,7 @@ export default function Blog() {
                           </Tag>
                         </p>
                       </div>
+                      </Row>
                     </div>
                   </Modal>
                                 

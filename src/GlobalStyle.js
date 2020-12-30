@@ -1,12 +1,61 @@
 import { createGlobalStyle } from 'styled-components';
  
 export const GlobalStyle = createGlobalStyle`
-
+ ::-webkit-scrollbar {
+ width: 3px;
+ 
+}
+::-webkit-scrollbar-thumb {
+ background: #429FE4; 
+}
 
 .ant-card:hover{
 background:#526676;
+
 }
 .ant-modal-close-x{
+    
+}
+
+.ant-select-item{
+    font-family: Roboto;
+ font-size: 11px;
+ color:#FFFFFF;
+ 
+  letter-spacing:0.75px;
+}
+
+.CreateGroupElement{
+    color:#9EA4A9;
+    font-family: Roboto;
+    font-size: 12; 
+    letter-spacing:0.65px;
+}
+
+.ant-select-dropdown{
+    background:#222222;
+    border:  E8E8E8;
+ border-opacity:17%;
+
+ 
+}
+.ant-select-item-option-active{
+    background:#172B3A;
+    
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 600;
+    background-color: #172B3A;
+    color:#FFFFFF;
+}
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: #555657;
+    
+}
+
+.ant-select-item-option-selected{
+    background-color: #172B3A;
     
 }
        
@@ -170,16 +219,18 @@ background:#526676;
        }
 
 }
-
+.ant-modal-content{
+    box-shadow: 0px 0px;
+}
 .ant-modal-mask {
     position: fixed;
-    box-sha
+    
     height: 100%;
     background-color: transparent;
 }
 .ant-modal-body{
            background:#292A2B;
-           
+           overflow:auto;
                
                 .postheader{
                         span{
@@ -191,6 +242,12 @@ background:#526676;
                         }
                  .postPhoto{
                      margin-top: 10px;
+                     .img1{
+                         display : block;
+                     }
+                    .img2{
+                        display:none;
+                    }
                  }
                  .PostHeading{
                          color:#88CDFF;
@@ -226,11 +283,29 @@ background:#526676;
                     letter-spacing:0.75px;
                     border:none;
                  }
+}
        @media only screen and (max-width: 768px) {
 
-           .postPhoto{
-               display:none;
-           }
+
+
+        .ant-modal-body{
+           background:#292A2B;
+           overflow:scroll;
+               
+                
+                 .postPhoto{
+                     .img1{
+                         display:none;
+                     }
+                    .img2{
+                        display : block
+                    }
+                    
+                 }
+                
+                   
+                 
+                 
         .ant-modal-wrap {
                   z-index: 1000;
                   margin-top:0;
