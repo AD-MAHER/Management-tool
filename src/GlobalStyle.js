@@ -17,6 +17,29 @@ background:#526676;
     
 }
 
+.ant-input-affix-wrapper{
+    background:#222222;
+:hover{
+    background:#222222;
+}}
+.ant-modal-body .ant-form .ant-input {
+    background: #222222;
+    color: #E8E8E8;
+    border:0px;
+    border-radius: 5px;
+}
+
+.ant-select.selector{
+    display:none;
+}
+>span.ant-select-selection-item {
+    background-color:#222222;
+}
+    .ant-select-selection-item {
+  background:transparent;
+    }
+
+
 .ant-select-item{
     font-family: Roboto;
  font-size: 11px;
@@ -37,7 +60,13 @@ background:#526676;
     border:  E8E8E8;
  border-opacity:17%;
 
- 
+}
+
+.Position1{
+    margin-left:80px;
+}
+.Position2{
+    margin-left:65px;
 }
 .ant-select-item-option-active{
     background:#172B3A;
@@ -286,8 +315,12 @@ background:#526676;
 }
        @media only screen and (max-width: 768px) {
 
-
-
+        .Position1{
+    margin-left:0px;
+}
+.Position2{
+    margin-left:0px;
+}
         .ant-modal-body{
            background:#292A2B;
            overflow:scroll;

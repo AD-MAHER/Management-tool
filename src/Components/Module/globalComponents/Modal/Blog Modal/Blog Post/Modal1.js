@@ -9,7 +9,7 @@ const Modal1 = () => {
 
   function handleChange(value) {
     
-    console.log(` ${value}`  );
+    // console.log(` ${value}`  );
   }
 
   const props = {
@@ -20,7 +20,7 @@ const Modal1 = () => {
     },
     onChange(info) {
       if (info.file.status !== "uploading") {
-        console.log(info.file, info.fileList ,);
+        // console.log(info.file, info.fileList ,);
       }
       if (info.file.status === "done") {
         message.success(`${info.file.name} file uploaded successfully`);

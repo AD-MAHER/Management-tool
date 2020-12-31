@@ -4,12 +4,13 @@ import { Form, Input, Button, Radio, Select, Modal } from "antd";
 const CreateGroupModal = () => {
     const [groupName, setGroupName] = useState("");
     const [isChecked, setIsChecked] = useState("");
+    const [selectName, setSelectName] = useState();
     
     const { Option } = Select;
    
-    const Submit = (e ) => {
-       const Selected = [e];
-    console.log([`GroupName : ${groupName}`, `GroupType : ${isChecked}` ,` Users: ${Selected}`]);
+    const Finish = (  ) => {
+      
+    console.log([`GroupName : ${groupName}`, `GroupType : ${isChecked}` ,` Users: ${selectName}`]);
         
         
     }
@@ -42,7 +43,7 @@ const CreateGroupModal = () => {
                 onCancel={handleCancel}
                 footer={[
 
-                <Button key="submit" type="primary" onClick={Submit , handleOk} htmlType="submit"  form="CreateGroup">
+                <Button key="submit" type="primary" onClick={Finish} htmlType="submit"  form="CreateGroup">
                         Save
                 </Button>
                 ]}
@@ -57,7 +58,7 @@ const CreateGroupModal = () => {
                         remember: true,
                       
                     }}
-                    onFinish={Submit}
+                    onFinish={Finish}
                    >
                     <Form.Item>
                         <span className="CreateGroupElement">Group Name</span><br /><br />
@@ -87,7 +88,8 @@ const CreateGroupModal = () => {
                             style={{ width: 200 }}
                             placeholder="Search or Select Users"
                             optionFilterProp="children"
-                            onChange={ Submit}
+                           
+                            value={selectName} onChange={setSelectName}
                             
                             filterOption={(input, option) =>
                                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
