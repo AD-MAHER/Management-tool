@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Input, Button, Radio, Select, Modal } from "antd";
-import { Row, Col } from "antd";
+import { Row, Col , InputNumber} from "antd";
 
 
 
@@ -52,6 +52,7 @@ const RegisterUserModal = (props) => {
         Create
            </Button>
       <Modal
+      maskClosable={false}
         visible={isModalVisible}
         title="New Post"
         onOk={handleOk}
@@ -81,7 +82,7 @@ const RegisterUserModal = (props) => {
           <Form.Item
                 label="Firstname"
                 name="First Name"
-                rules={[{ required: true, message: 'Please input your Firstname!' }]}
+                rules={[{ required: true, message: 'Please input your Firstname!' },{pattern:"^[a-zA-Z ]+$" , message: 'Char allowed only!' }]}
               >
                 <Input value={firstName} onChange={(e) => { setFirstName(e.target.value) }} />
               </Form.Item>
@@ -90,7 +91,7 @@ const RegisterUserModal = (props) => {
           <Form.Item
                 label="Lastname"
                 name="Last Name"
-                rules={[{ required: true, message: 'Please input your Lastname!' }]}
+                rules={[{ required: true, message: 'Please input your Lastname!'},{pattern:"^[a-zA-Z ]+$" , message: 'Char allowed only!' }]}
               >
                 <Input value={lastName} onChange={(e) => { setLastName(e.target.value) }}/>
               </Form.Item>
@@ -122,13 +123,14 @@ const RegisterUserModal = (props) => {
             <Form.Item
                 name="phone"
                 label="Phone Number"
-                rules={[{ required: true, message: 'Please input your phone number!' , pattern:[0-9] }]}
+                hasFeedback
+                rules={[{ required: true, message: 'Please input your phone number!' ,  }]}
                 value={contact} onChange={(e) => { setContact(e.target.value) }}
               >
-                <Input
+                <InputNumber
                 
-                rules={[{ required: true, message: 'Please input your phone number!' , pattern:[0-9] }]}
-                  maxLength={10}
+                rules={[{ required: true, message: 'Please input your phone number!' ,pattern:"[0-9]{10}"    }]}
+                    maxLength={10} type="number" minLength={10}
                 />
                 </Form.Item>
           </Col>
@@ -230,6 +232,9 @@ const RegisterUserModal = (props) => {
                     required: true,
                     message: 'Please input your password!',
                   },
+                  {
+                    pattern:"^[a-zA-Z0-9!@#$%^&*]{6,16}$" , 
+                    message:'Password Should be Alpha-Numeric!' }
                 ]}
                 
               >

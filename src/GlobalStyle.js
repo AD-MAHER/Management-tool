@@ -16,7 +16,24 @@ background:#526676;
 .ant-modal-close-x{
     
 }
-
+.ant-input-number{
+    width:88%;
+    border-radius:4.5px;
+}
+.ant-input-number-input-wrap{
+    background:#222222;
+    color:#FFFFFF;
+    border-radius:5px;
+}
+.ant-input-number-handler-wrap{
+display:none;
+}
+.ant-input-number-handler-down{
+    display:none;
+}
+.ant-input-number-handler-up{
+    display:none;
+}
 .ant-input-affix-wrapper{
     background:#222222;
 :hover{

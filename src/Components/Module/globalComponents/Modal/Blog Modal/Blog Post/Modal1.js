@@ -54,6 +54,7 @@ const Modal1 = () => {
                Create
            </Button>
           <Modal
+              maskClosable={false}
               visible={isModalVisible}
               title="New Post"
               onOk={handleOk}
