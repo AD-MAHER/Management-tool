@@ -5,16 +5,16 @@ const CreateGroupModal = () => {
     const [groupName, setGroupName] = useState("");
     const [isChecked, setIsChecked] = useState("");
     const [selectName, setSelectName] = useState();
-    
+
     const { Option } = Select;
-   
-    const Finish = (  ) => {
-      
-    console.log([`GroupName : ${groupName}`, `GroupType : ${isChecked}` ,` Users: ${selectName}`]);
-        
-        
+
+    const Finish = () => {
+
+        console.log([`GroupName : ${groupName}`, `GroupType : ${isChecked}`, ` Users: ${selectName}`]);
+        setIsModalVisible(false);
+
     }
-    
+
 
     const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -37,13 +37,14 @@ const CreateGroupModal = () => {
                 Create
            </Button>
             <Modal
+                maskClosable={false}
                 visible={isModalVisible}
                 title="New Post"
                 onOk={handleOk}
                 onCancel={handleCancel}
                 footer={[
 
-                <Button key="submit" type="primary" onClick={Finish} htmlType="submit"  form="CreateGroup">
+                    <Button key="submit" type="primary" onClick={Finish} htmlType="submit" form="CreateGroup">
                         Save
                 </Button>
                 ]}
@@ -56,10 +57,10 @@ const CreateGroupModal = () => {
                     name="basic"
                     initialValues={{
                         remember: true,
-                      
+
                     }}
                     onFinish={Finish}
-                   >
+                >
                     <Form.Item>
                         <span className="CreateGroupElement">Group Name</span><br /><br />
 
@@ -67,6 +68,7 @@ const CreateGroupModal = () => {
                     </Form.Item>
 
                     <Form.Item>
+                        <span className="CreateGroupElement">Radio Type</span><br />
                         <Radio.Group>
                             <Radio value="Private" checked={isChecked} onChange={(e) => { setIsChecked(e.target.value) }}>
                                 Private (Readable to users outside group)
@@ -88,9 +90,9 @@ const CreateGroupModal = () => {
                             style={{ width: 200 }}
                             placeholder="Search or Select Users"
                             optionFilterProp="children"
-                           
+
                             value={selectName} onChange={setSelectName}
-                            
+
                             filterOption={(input, option) =>
                                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                             }

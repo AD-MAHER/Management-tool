@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-export const UserStyle = styled.div` 
+export const TaskStyle = styled.div` 
 padding:15px 15px ;
 
-.title-user{
+.title-task{
    font-style:roboto;
    font-weight:bold;
    font-size:14px;

@@ -2,6 +2,7 @@ import React from 'react'
 import { UserGroupStyle } from './UserGroupStyle';
 import { Button } from 'antd';
 import CreateGroupModal from '../../../globalComponents/Modal/Group Modal/CreateGroupModal';
+import GroupTable from "../../../../Table/GroupTable";
 
 
 export default function User_Groups() {
@@ -20,7 +21,9 @@ export default function User_Groups() {
                         </div>
                    <hr className="border-class" />
                 </div>
-
+                <div >
+                    <GroupTable />
+                </div>
             </UserGroupStyle>
 
         </div>

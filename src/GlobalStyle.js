@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
- 
+
 export const GlobalStyle = createGlobalStyle`
  ::-webkit-scrollbar {
  width: 3px;
@@ -9,6 +9,9 @@ export const GlobalStyle = createGlobalStyle`
  background: #429FE4; 
 }
 
+.ant-modal-body{
+    color:#FFFFFF;
+}
 .ant-card:hover{
 background:#526676;
 
@@ -46,6 +49,7 @@ display:none;
     border-radius: 5px;
 }
 
+
 .ant-select.selector{
     display:none;
 }
@@ -75,7 +79,7 @@ display:none;
 .ant-select-dropdown{
     background:#222222;
     border:  E8E8E8;
- border-opacity:17%;
+
 
 }
 
@@ -229,8 +233,8 @@ display:none;
                   }
               .ant-input:placeholder-shown{
                 letter-spacing:0.35px;
-                      font-family:Roboto-Light
-                      color: ;
+                      font-family:Roboto-Light;
+                      color:#FFFFFF ;
                       font-size:12px;
                   }
               .ant-form-item-required{
@@ -359,7 +363,7 @@ display:none;
         .ant-modal-wrap {
                   z-index: 1000;
                   margin-top:0;
-                overflow:scroll;
+                ${'' /* overflow:scroll; */}
            
                 }
                 .ant-modal-header{
@@ -473,8 +477,8 @@ display:none;
                   }
               .ant-input:placeholder-shown{
                 letter-spacing:0.35px;
-                      font-family:Roboto-Light
-                      color: ;
+                      font-family:Roboto-Light;
+                      color: #FFFFFF;
                       font-size:12px;
                   }
               .ant-form-item-required{

@@ -1,12 +1,12 @@
 import React from 'react'
 import { UserStyle } from './UserStyle';
 import RegisterUserModal from '../../../globalComponents/Modal/User Modal/RegisterUserModal';
-import Table1 from '../../../../Table/Table1';
+import UserTable from '../../../../Table/UserTable';
 
 export default function Users() {
     return (
 
-        <div>
+        <div >
             <UserStyle>
 
                 <div >
@@ -21,7 +21,7 @@ export default function Users() {
 
 
                 <div >
-                    <Table1 />
+                    <UserTable />
                 </div>
             </UserStyle>
 

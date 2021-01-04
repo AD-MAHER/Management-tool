@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { BlogStyle } from './BlogStyle';
-import amd from '../../../../../Core/Images/img1.png';
+import amd from '../../../../../Core/Images & Icons/img1.png';
 import { Row, Card, Tooltip } from 'antd';
 import Modal1 from '../../../globalComponents/Modal/Blog Modal/Blog Post/Modal1';
 import DeletePost from "../../../globalComponents/Modal/Blog Modal/DeletePost";
@@ -10,7 +10,8 @@ const { Meta } = Card;
 
 
 export default function Blog() {
-    const post = useSelector(state => state.posts)
+    const post = useSelector((state) => state.blogpost.posts);
+    
     const authicon = (<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.5 0C2.90927 0 0 2.68548 0 6C0 9.31452 2.90927 12 6.5 12C10.0907 12 13 9.31452 13 6C13 2.68548 10.0907 0 6.5 0ZM6.5 2.32258C7.77379 2.32258 8.80645 3.27581 8.80645 4.45161C8.80645 5.62742 7.77379 6.58065 6.5 6.58065C5.22621 6.58065 4.19355 5.62742 4.19355 4.45161C4.19355 3.27581 5.22621 2.32258 6.5 2.32258ZM6.5 10.6452C4.96149 10.6452 3.58286 10.0016 2.66028 8.99516C3.15302 8.13871 4.11754 7.54839 5.24194 7.54839C5.30484 7.54839 5.36774 7.55806 5.42802 7.575C5.76875 7.67661 6.1252 7.74194 6.5 7.74194C6.8748 7.74194 7.23387 7.67661 7.57198 7.575C7.63226 7.55806 7.69516 7.54839 7.75806 7.54839C8.88246 7.54839 9.84698 8.13871 10.3397 8.99516C9.41714 10.0016 8.03851 10.6452 6.5 10.6452Z" fill="#88CDFF" />
     </svg>)
@@ -64,7 +65,7 @@ export default function Blog() {
                         {post.map((i, index) => {
                            
 
-;
+
 
                             return (
                                 <>
@@ -82,7 +83,7 @@ export default function Blog() {
 
 
                                         <span className="icon-class data-class" >{editicon} &nbsp; &nbsp;
-                                        <DeletePost title={i.title} /></span>
+                                        <DeletePost title={i.title} tokens={i.token}/></span>
 
                                     </Card>
                                 </Tooltip>

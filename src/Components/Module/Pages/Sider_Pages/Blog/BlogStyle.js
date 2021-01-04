@@ -123,6 +123,8 @@ margin-left:-10px;
 
                @media only screen and (max-width: 768px) {
 
+ 
+                    
 
                   .scrollClass{
                               height: 72vh;
@@ -138,7 +140,10 @@ margin-left:-10px;
                            }
                                           }
    @media only screen and (max-width: 320px) {
-
+      .eMYuvm {
+ 
+         width: 50vw;
+}
 
 .scrollClass{
             height: 72vh;
@@ -152,6 +157,6 @@ margin-left:-10px;
             margin-left:0px;
             background: #2D3236;
          }
-                        }
+                        
 
 `;

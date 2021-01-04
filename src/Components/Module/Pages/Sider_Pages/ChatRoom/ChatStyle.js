@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-export const UserStyle = styled.div` 
+export const ChatStyle = styled.div` 
 padding:15px 15px ;
 
-.title-user{
+.title-chat{
    font-style:roboto;
    font-weight:bold;
    font-size:14px;
