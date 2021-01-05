@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Input, Button, Radio, Select, Modal } from "antd";
-import { Row, Col , InputNumber} from "antd";
-
+import { Row, Col } from "antd";
+import InputDigit from "../../Input/InputDigit";
 
 
 
@@ -127,11 +127,12 @@ const RegisterUserModal = (props) => {
                 rules={[{ required: true, message: 'Please input your phone number!' ,  }]}
                 value={contact} onChange={(e) => { setContact(e.target.value) }}
               >
-                <InputNumber
+                <InputDigit maxLengths={10} minLengths={10} rules={[{ required: true,
+                 message: 'Please input your phone number!'    }]}
+                       />
                 
-                rules={[{ required: true, message: 'Please input your phone number!' ,pattern:"[0-9]{10}"    }]}
-                    maxLength={10} type="number" minLength={10}
-                />
+                {/* 
+                /> */}
                 </Form.Item>
           </Col>
           </Row>

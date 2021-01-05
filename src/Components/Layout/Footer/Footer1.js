@@ -1,5 +1,4 @@
 import React from 'react'
-import { Layout } from 'antd';
 import { FooterStyle } from './FooterStyle';
 
 const NewYear = new Date().getFullYear();

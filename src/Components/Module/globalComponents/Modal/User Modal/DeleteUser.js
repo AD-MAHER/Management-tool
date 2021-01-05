@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Modal, Button } from "antd"
-import { useDispatch } from "react-redux";
+import { useDispatch  , useSelector} from "react-redux";
 import { DeleteUsers } from "../../../../../Core/Redux/Action/UserDelAction";
-export default function DeleteUser(props) {
 
+
+export default function DeleteUser(props) {
+    const tabledata = useSelector((state) => state.usertable.tableData);
     const users = (<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8 7C10.525 7 12.5714 5.4332 12.5714 3.5C12.5714 1.5668 10.525 0 8 0C5.475 0 3.42857 1.5668 3.42857 3.5C3.42857 5.4332 5.475 7 8 7ZM11.2 7.875H10.6036C9.81071 8.15391 8.92857 8.3125 8 8.3125C7.07143 8.3125 6.19286 8.15391 5.39643 7.875H4.8C2.15 7.875 0 9.52109 0 11.55V12.6875C0 13.4121 0.767857 14 1.71429 14H14.2857C15.2321 14 16 13.4121 16 12.6875V11.55C16 9.52109 13.85 7.875 11.2 7.875Z" fill="#8FA8BA"/>
     </svg>)
@@ -46,7 +48,15 @@ export default function DeleteUser(props) {
                     <Button key="submit" type="primary" onClick={handleCancel}>
                         Cancel
             </Button>]}>
-                <p>{users}  {props.FirstName} {props.LastName}</p>
+                
+                {tabledata.map((val, index) =>
+            val.token === (props.tokens) ? (
+              <span key={index}>
+               
+               <span > {users} &nbsp;{`${val.firstName} ${val.lastName}`}</span>
+              </span>
+            ) : null
+          )}
 
             </Modal>
         </>

@@ -21,7 +21,7 @@ export default function Page() {
                         <Route path='/req_otp' component={Forgot_Password} />
                         <Route path='/verify_otp' component={Verify_OTP} />
                         <Route path='/new_pass' component={New_Pass} />
-                        <Route path='/layout1' component={Layout1} />
+                        <Route path='/layout' component={Layout1} />
 
 
                     </Switch>

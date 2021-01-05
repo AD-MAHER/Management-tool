@@ -17,11 +17,11 @@ export default function Content1() {
             <ContentStyle>
                 <Layout>
                     <Switch>
-                        <Route path="/layout1/" exact component={Users} />
-                        <Route path="/layout1/groups" component={User_Groups} />
-                        <Route path="/layout1/blog" component={Blog} />
-                        <Route path="/layout1/chatroom" component={Chatroom} />
-                        <Route path="/layout1/taskmanagement" component={TaskMangement} />
+                        <Route path="/layout/" exact component={Users} />
+                        <Route path="/layout/groups" component={User_Groups} />
+                        <Route path="/layout/blog" component={Blog} />
+                        <Route path="/layout/chatroom" component={Chatroom} />
+                        <Route path="/layout/taskmanagement" component={TaskMangement} />
                     </Switch>
                 </Layout>
             </ContentStyle>

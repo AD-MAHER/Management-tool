@@ -1,6 +1,5 @@
 import React from 'react'
 import { UserGroupStyle } from './UserGroupStyle';
-import { Button } from 'antd';
 import CreateGroupModal from '../../../globalComponents/Modal/Group Modal/CreateGroupModal';
 import GroupTable from "../../../../Table/GroupTable";
 

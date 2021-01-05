@@ -1,14 +1,14 @@
-import React, {useState} from "react";
-import { Form, Input, Button, message, Upload, Select , Modal} from "antd";
-
+import React, { useState } from "react";
+import { Form, Input, Button, message, Upload, Select, Modal } from "antd";
+import { Row, Col } from "antd";
 const Modal1 = () => {
- 
+
   const { TextArea } = Input;
   const children = [];
-  
+
 
   function handleChange(value) {
-    
+
     // console.log(` ${value}`  );
   }
 
@@ -32,113 +32,124 @@ const Modal1 = () => {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-    const showModal = () => {
-        setIsModalVisible(true);
+  const showModal = () => {
+    setIsModalVisible(true);
 
-    };
-    const handleOk = () => {
-        setIsModalVisible(false);
-    };
+  };
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
 
-    const handleCancel = () => {
-        setIsModalVisible(false);
-    };
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
 
-    const FinishValue = values => {
-      console.log(values)
+  const FinishValue = values => {
+    console.log(values)
   }
 
   return (
     <>
-            <Button type="primary" onClick={showModal}>
-               Create
+      <Button type="primary" onClick={showModal}>
+        Create
            </Button>
-          <Modal
-              maskClosable={false}
-              visible={isModalVisible}
-              title="New Post"
-              onOk={handleOk}
-              onCancel={handleCancel}
-              footer={[
-                
-                <Button key="submit" type="primary"  onClick={handleOk} htmlType="submit" form="CreatePost" >
-                  Save
+      <Modal
+        maskClosable={false}
+        visible={isModalVisible}
+        title="New Post"
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={[
+
+          <Button key="submit" type="primary" onClick={handleOk} htmlType="submit" form="CreatePost" >
+            Save
                 </Button>,
+        ]}
+      >
+
+        <Form
+          xs sm md lg xl xxl
+          id='CreatePost'
+          className=" ant-form-vertical"
+          name="basic"
+          onFinish={FinishValue}
+          initialValues={{
+            remember: true,
+          }}
+        >
+          <Row>
+            <Form.Item
+              label="Post Title"
+              name="PostTitle"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your Post Title!",
+                },
               ]}
             >
-          
-      <Form 
-        xs sm md lg xl xxl
-        id='CreatePost'
-        className=" ant-form-vertical"
-        name="basic"
-        onFinish={FinishValue}
-        initialValues={{
-          remember: true,
-        }}
-      >
-        <Form.Item
-          label="Post Title"
-          name="PostTitle"
-          rules={[
-            {
-              required: true,
-              message: "Please input your Post Title!",
-            },
-          ]}
-        >
-          <Input placeholder="Enter Post Title" />
-        </Form.Item>
-        <Form.Item label="Post Cover Image"
-        name="Image"
-         rules={[
-            {
-              required: true,
-              message: "Please select Cover Photo!",
-            },
-          ]}>
-          <Upload {...props}>
-            <Button>Select</Button>
-          </Upload>
-        </Form.Item>
-        <Form.Item label="Post Content"
-        name="Content"
-         rules={[
-            {
-              required: true,
-              message: "Please Add some Description!",
-            },
-          ]}>
-          <TextArea
-            rows={5}
-            placeholder="Enter Post Content (This is resizable text area)"
-          />
-        </Form.Item>
-        <Form.Item label="Attachments"
-        name="File"
-         rules={[
-            {
-              required: true,
-              message: "Please Attach Some File!",
-            },
-          ]}>
-          <Upload {...props}>
-            <Button>Select</Button>
-          </Upload>
-        </Form.Item>
-        <Form.Item label="Hashtages"
-        name="hashtags"
-         rules={[{ required: true, message: 'Missing area' }]}>
-          <Select
-            mode="tags"
-            style={{ width: "100%" }}
-            placeholder="Tags Mode"
-            onChange={handleChange}
-          >
-            {children}
-          </Select>
-        </Form.Item>
-      </Form>
+              <Input placeholder="Enter Post Title" />
+            </Form.Item>
+          </Row>
+          <Row style={{display:"inline-block"}}>
+            <Form.Item label="Post Cover Image"
+              name="Image"
+              rules={[
+                {
+                  required: true,
+                  message: "Please select Cover Photo!",
+                },
+              ]}>
+              <Upload {...props}>
+                <Button>Select</Button>
+              
+
+              </Upload>
+
+
+            </Form.Item>
+          </Row>
+
+
+          <Form.Item label="Post Content"
+            name="Content"
+            rules={[
+              {
+                required: true,
+                message: "Please Add some Description!",
+              },
+            ]}>
+            <TextArea
+              rows={5}
+              placeholder="Enter Post Content (This is resizable text area)"
+            />
+          </Form.Item>
+          <Form.Item label="Attachments"
+            name="File"
+            rules={[
+              {
+                required: true,
+                message: "Please Attach Some File!",
+              },
+            ]}>
+            <Upload {...props}>
+              <Button>Select</Button>
+            </Upload>
+          </Form.Item>
+          <Form.Item label="Hashtages"
+            name="hashtags"
+            rules={[{ required: true, message: 'Missing area' }]}>
+            <Select
+              mode="tags"
+              style={{ width: "100%" }}
+              placeholder="Tags Mode"
+              onChange={handleChange}
+            >
+              {children}
+            </Select>
+          </Form.Item>
+
+        </Form>
       </Modal>
     </>
   );

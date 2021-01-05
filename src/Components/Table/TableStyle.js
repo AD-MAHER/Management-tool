@@ -7,6 +7,16 @@ color : #FFFFFF;
 
 }
 
+.ant-table-thead > tr > th:hover {
+    background-color:#172B3A;
+}
+.ant-table-column-sorters-with-tooltip {
+    background-color:#222222;
+}
+.ant-table-column-sorters-with-tooltip:hover {
+    background-color:#172B3A;
+}
+
 .Last-Log{
     overflow:hidden;
     text-overflow:ellipsis;

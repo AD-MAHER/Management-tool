@@ -31,7 +31,7 @@ const GroupTable = () => {
         <Table scroll={{ y: 370 }} dataSource={grouptabledata} >
 
 
-          <Column ellipsis={true} title="Group Name" dataIndex="groupName" key="groupName"
+          <Column ellipsis={true} sorter= {(a, b) => a.groupName.length - b.groupName.length} title="Group Name" dataIndex="groupName" key="groupName"
             render={groupName => (
 
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Layout } from 'antd';
 import { HeaderStyle } from './HeaderStyle';
 import Zeronsec_Logo from '../../../Core/Logo/Zeronsec_logo.svg';
 import { Avatar } from 'antd';

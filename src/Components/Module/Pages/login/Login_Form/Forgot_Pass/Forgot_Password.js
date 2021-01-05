@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import LoginPage from '../../LoginPage';
 
+
 export default function Forgot_Password(props) {
     return (
         <>
@@ -23,12 +24,12 @@ export default function Forgot_Password(props) {
 
                     <h3 className="Head1">you'll receive OTP via email.</h3>
 
-                    <Form className="FormClass">
-
-                        <Input1 className="uni_margin" name="email" label="Enter your Registerd Email" rules={[{ required: true, message: 'Email' },
+                    <Form className="FormClass" >
+                        
+                        <Input1 className="uni_margin" name="email" label="Enter your Registerd Email"  rules={[{ required: true, message: 'Email' },
                         { type: 'email', message: 'Please enter in this form "abc@xyz.123"' },
                         ]} input={<Input />} />
-
+                           
 
                         <NavLink to='/verify_otp'><Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
                             className="button_css"

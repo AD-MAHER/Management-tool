@@ -7,6 +7,7 @@ import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import {NavLink} from "react-router-dom";
 import {ArrowLeftOutlined} from '@ant-design/icons';
 import LoginPage from '../../LoginPage';
+import InputDigit from '../../../../globalComponents/Input/InputDigit';
 export default function Verify_OTP(props) {
     return (
         <>
@@ -23,8 +24,8 @@ export default function Verify_OTP(props) {
 
                     <Input1 maxLength={6} name="Enter OTP" label="Enter OTP" rules={[{ required: true, message: 'OTP' } 
                    
-                    ]} pattern="[0-9]*" input={<Input />} />
-
+                    ]} pattern="[0-9]*" input={<InputDigit maxLengths={6} minLengths={6} />} />
+ 
                         <NavLink to="/new_pass">
                     <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
                         className="button_css"

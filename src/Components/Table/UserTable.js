@@ -7,10 +7,7 @@ import DeleteUser from "../Module/globalComponents/Modal/User Modal/DeleteUser";
 
 
 
-
-
-
-const { Column, ColumnGroup } = Table;
+const { Column } = Table;
 
 
 const editicon = (<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,32 +28,37 @@ const UserTable = () => {
 
 
 
+
   return (
     <TableTheme>
       <div>
 
 
-        <Table scroll={{ y: 370 }} dataSource={tabledata} >
+        <Table scroll={{ y: 370 }} dataSource={tabledata}>
 
-          <ColumnGroup title="Name" ellipsis={true} key="Name"   >
-            <Column width={100} title={false} ellipsis={true} dataIndex="firstName"
-              render={firstName => (
+        
+             <Column width={100} title="Name" key="Name"
+              ellipsis={true} dataIndex="token"
+              render={ token => (
+               <>   
+             
+                {tabledata.map((val, index) =>
+            val.token === token ? (
+              <span key={index}>
 
-                <Tooltip placement="topLeft" title={firstName}>
-                  {firstName}
-                </Tooltip>
+              <Tooltip placement="topLeft" title={val.firstName}>
+               <span >{`${val.firstName} ${val.lastName}`}</span>
+               </Tooltip> 
+              </span>
+            ) : null
+          )}
+                
+                </>
               )}
 
-
-            />
-            <Column  ellipsis={true} dataIndex="lastName"
-
-              render={lastName => (
-                <Tooltip placement="topLeft" title={lastName}>
-                  {lastName}
-                </Tooltip>)}
-            />
-          </ColumnGroup>
+            /> 
+          
+        
 
           <Column ellipsis={true} title="Designation" dataIndex="designation" key="designation"
             render={designation => (
@@ -90,22 +92,17 @@ const UserTable = () => {
 
 
           />
-          <Column  title="Action" dataIndex="token" key="Action" render={(token) =>
+          <Column title="Action" dataIndex="token" key="Action" render={token =>
             <>
               <span>{editicon}&nbsp; &nbsp;</span>
-              <DeleteUser tokens={token} 
-               //FirstName={firstName} LastName={lastName}
+              <DeleteUser tokens={token}
 
-               />
+              />
             </>} />
 
 
 
         </Table>
-
-
-
-
 
 
       </div>
