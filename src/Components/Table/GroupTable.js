@@ -28,7 +28,7 @@ const GroupTable = () => {
       <div>
 
 
-        <Table scroll={{ y: 370 }} dataSource={grouptabledata} >
+        <Table scroll={{ y: 370 }} loading={false} dataSource={grouptabledata} >
 
 
           <Column ellipsis={true} sorter= {(a, b) => a.groupName.length - b.groupName.length} title="Group Name" dataIndex="groupName" key="groupName"
@@ -62,8 +62,13 @@ const GroupTable = () => {
          
           <Column title="Action" dataIndex="token" key="Action" render={(token) =>
             <>
+              <Tooltip placement="left" title="Edit">
               <span>{editicon}&nbsp; &nbsp;</span>
-              <DeleteGroup tokens={token} />
+              </Tooltip>
+                     
+                <DeleteGroup tokens={token} />
+                
+              
             </>} />
 
 

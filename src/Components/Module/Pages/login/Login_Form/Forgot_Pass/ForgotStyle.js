@@ -16,13 +16,13 @@ export const ForgotStyle = styled.div`
         width :200px;
         display:block;
     }
-            .
+            
     .Head1{
         font-weight: bold;
         font-size:16px;
         color:#57A1D8;
         font-style:Roboto;
-        margin-top:-60px;
+        margin-top:-6px;
     }
     .Head2{
         font-weight: bold;
@@ -30,7 +30,7 @@ export const ForgotStyle = styled.div`
         color:#E5E5E5;
         margin-top:-20px;
         margin-bottom:10px;
-        width:100vw;
+         width:50vw; 
     }
 
     .FormClass{
@@ -43,29 +43,29 @@ export const ForgotStyle = styled.div`
         width:100%;
         float:right
     }
-    .ant-input{
+     .ant-input{
     width:260px;
     
       
-    }
+    } 
    
-    .ant-form-item-control-input{
+     .ant-form-item-control-input{
         
         width:250px;
           border:#E8E8E8;
-            color:##FFFFFF; 
+            color:#FFFFFF; 
         
-        }
+        } 
 
 
     .right_div{
-        span={12};
+        
        position:fixed;
         margin:0;
-        pading:0;
+        padding:0;
    
     }
-    .Forgot{
+     .Forgot{
         margin-right:-150px;
         
 
@@ -73,7 +73,7 @@ export const ForgotStyle = styled.div`
        
     }
     
-    .loginClass{
+     .loginClass{
         margin-top : 40%;
         margin-left: 20%;
         font-size : 16px;
@@ -93,5 +93,5 @@ export const ForgotStyle = styled.div`
  @media (max-width: 400px) {
    
  }
-}
+
 `;

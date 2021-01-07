@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button } from "antd"
+import { Modal, Button, Tooltip } from "antd"
 import { useDispatch, useSelector } from "react-redux";
 import { DeleteGroups } from "../../../../../Core/Redux/Action/GroupDelAction";
 
@@ -33,9 +33,11 @@ export default function DeleteGroup(props) {
     </svg>)
     return (
         <>
+            <Tooltip title="Delete" placement="right">
             <span onClick={showModal}>
                 {deleteicon}
             </span>
+            </Tooltip>
             <Modal
                 centered
                 maskClosable={false}
@@ -44,6 +46,7 @@ export default function DeleteGroup(props) {
                 onOk={handleDelete}
                 onCancel={handleCancel}
                 footer={[
+                    
                     <Button key="back" onClick={handleDelete}>
                         Delete
             </Button>,

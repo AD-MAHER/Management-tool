@@ -6,6 +6,8 @@ import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import { NavLink } from "react-router-dom";
 import {ArrowLeftOutlined} from '@ant-design/icons';
 import LoginPage from '../../LoginPage';
+
+
 export default function New_Pass(props) {
   return (
     <>
@@ -32,9 +34,7 @@ export default function New_Pass(props) {
                     required: true,
                     message: 'Please input your password!',
                   },
-                  {
-                    pattern:"^[a-zA-Z0-9!@#$%^&*]{6,16}$" , 
-                    message:'Password Should be Alpha-Numeric!' }
+                
                 ]}
                 
               >
@@ -70,7 +70,7 @@ export default function New_Pass(props) {
             <NavLink to="/">
               <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
                 className="button_css"
-                type='button'><span>Change Password</span></Button1>
+                type='button'><span>Change&nbsp;Password</span></Button1>
 
             </NavLink>
           </Form>

@@ -9,6 +9,44 @@ export const GlobalStyle = createGlobalStyle`
  background: #429FE4; 
 }
 
+.ant-spin-nested-loading {
+    transition:none;
+}
+
+
+.ant-popover-inner-content {
+    padding: 12px 16px;
+    color:#FFFFFF;
+    background-color:#222222;
+}
+.ant-popover-message-title{
+    color:#9EA4A9;
+    font-weight:bold;
+   font-family:Roboto;
+}
+.anticon-exclamation-circle{
+    display:none;
+}
+.ant-popover-buttons> .ant-btn{
+   background-color: #292A2B;
+   color:#9EA4A9;
+   font-weight:bold;
+   font-family:Roboto;
+   border:0.1px solid #222222;
+   border-radius:1px;
+   margin-right:10px;
+   display:
+}
+.ant-popover-buttons> .ant-btn:hover{
+    background-color:#172B3A;
+}
+.ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow, .ant-popover-placement-bottomLeft > .ant-popover-content > 
+.ant-popover-arrow,
+ .ant-popover-placement-bottomRight >
+  .ant-popover-content > .ant-popover-arrow
+  {
+    border-color: #222222; 
+}
 .ant-modal-body{
     color:#FFFFFF;
 }
@@ -158,8 +196,17 @@ display:none;
        .ant-modal-body{
            background:#292A2B;
        border:none;
-       
-       
+       .anticon svg {
+    display: inline-block;
+    color: #FFFFFF;
+}
+.ant-input-affix-wrapper > input.ant-input {
+    padding: 0;
+    border: none;
+    outline: none;
+   
+}  
+
             .ant-form{
              
                 .ant-radio-inner{
@@ -480,6 +527,7 @@ display:none;
                       font-family:Roboto-Light;
                       color: #FFFFFF;
                       font-size:12px;
+                      b
                   }
               .ant-form-item-required{
                   color:#E5E5E5;

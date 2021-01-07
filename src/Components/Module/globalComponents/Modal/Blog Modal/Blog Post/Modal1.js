@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Input, Button, message, Upload, Select, Modal } from "antd";
-import { Row, Col } from "antd";
+import { Row } from "antd";
 const Modal1 = () => {
 
   const { TextArea } = Input;

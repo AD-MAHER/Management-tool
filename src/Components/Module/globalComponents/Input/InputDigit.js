@@ -19,7 +19,7 @@ function formatNumber(value) {
   return `${prefix}${result}${list[1] ? `.${list[1]}` : ''}`;
 }
 
-export default class NumericInput extends React.Component {
+export default class InputDigit extends React.Component {
   onChange = e => {
     const { value } = e.target;
     const reg = /^-?\d*(\.\d*)?$/;
@@ -46,7 +46,7 @@ export default class NumericInput extends React.Component {
     const title = value ? (
       <span className="numeric-input-title">{value !== '-' ? formatNumber(value) : '-'}</span>
     ) : (
-      'Input a number'
+      'Input a numbers only'
     );
     return (
       <Tooltip
@@ -68,19 +68,3 @@ export default class NumericInput extends React.Component {
   }
 }
 
-//  class InputDigit extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { value: '' };
-//   }
-
-//   onChange = value => {
-//     this.setState({ value });
-//   };
-
-//   render() {
-//     return (
-//       <NumericInput style={{ width: 120 }} value={this.state.value} onChange={this.onChange}   />
-//     );
-//   }
-// }

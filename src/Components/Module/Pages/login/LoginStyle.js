@@ -24,7 +24,7 @@ export const LoginStyle = styled.div`
        
   .ant-input{
     width:350px;
-    height:70px
+
       font-size:14px;
     background:#222222;
     color:#FFFFFF;
@@ -34,9 +34,15 @@ export const LoginStyle = styled.div`
     }
    
   }
-  
+  .ant-form-item-label > label {
+    color: #ffffff;
+}
+.anticon svg {
+    display: inline-block;
+    color: #FFFFFF;
+}
     
-        .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+ .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
       
         content: '';
     }

@@ -1,12 +1,20 @@
 import styled from 'styled-components';
 export const TableTheme = styled.div` 
-
+  
+    
 .ant-table-cell{
     background-color: #222222;
 color : #FFFFFF;
 
 }
-
+.ant-spin-container {
+  
+}
+.ant-table-tbody > tr > td {
+    border-bottom: none;
+    -webkit-transition: none; 
+ transition: none; 
+}
 .ant-table-thead > tr > th:hover {
     background-color:#172B3A;
 }
@@ -28,8 +36,6 @@ max-height:10px;
 }
 
 .ant-pagination{
-    
- 
     background-color: #222222;
 color : #FFFFFF;
 }
@@ -78,7 +84,7 @@ color : #FFFFFF;
 
 .ant-table-tbody > tr.ant-table-row-selected > td {
     background: #555657;
-    border-color: #E8E8E8;
+    border: none;
 }
 .editable-cell-value-wrap {
     background-color: #555657;
@@ -97,10 +103,7 @@ color : #FFFFFF;
 color : #FFFFFF;
 }
 
-::selection{
-    color:yellow;
-    background:red;
-}
+
 .ant-table-tbody > tr.ant-checkbox-wrapper-checked> td {
     background-color: #222222;
 color : #FFFFFF;

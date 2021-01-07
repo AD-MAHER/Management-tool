@@ -3,12 +3,7 @@ import { Layout } from 'antd';
 import { LoginStyle } from './LoginStyle';
 import { Row, Col } from 'antd';
 import Zeronsec_Logo from '../../../../Core/Logo/Zeronsec_logo.svg';
-import LoginForm from './LoginForm';
-import Forgot_Password from './Login_Form/Forgot_Pass/Forgot_Password';
-import Verify_OTP from './Login_Form/Request_OTP/Verify_OTP';
-import New_Pass from './Login_Form/New_Pass/New_Pass';
-import Layout1 from '../../../Layout/Layout1';
-import { Switch, Route , Redirect} from 'react-router-dom';
+
 export default function LoginPage(props) {
     return (
         <div>

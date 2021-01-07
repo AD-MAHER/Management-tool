@@ -7,28 +7,27 @@ import InputDigit from "../../Input/InputDigit";
 
 
 const RegisterUserModal = (props) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [contact, setContact] = useState("");
-  const [designation , setDesignation] = useState();
-  const [bloodgroup , setBloodgroup] = useState();
-  const [checked , setChecked]  = useState();
-  const [texed , setTexed] = useState();
-  const [password , setPassword] = useState();
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [contact, setContact] = useState("");
+  // const [designation , setDesignation] = useState();
+  // const [bloodgroup , setBloodgroup] = useState();
+  // const [checked , setChecked]  = useState();
+  // const [texed , setTexed] = useState();
+  // const [password , setPassword] = useState();
+  const [form] = Form.useForm();
 
+ 
   const { TextArea } = Input;
   const { Option } = Select;
 
-  const Submit = () => {
 
-    console.log([`GroupName : ${firstName} ${lastName}`, `email: ${email}`, ` contact: ${contact}`,
-   `designation: ${designation}` , `bloodgroup: ${bloodgroup}`, `Gender: ${checked}` ,`Adderess: ${texed }`
-   , `password: ${password}`]);
-
-
-  }
-
+  const onFinish = (values) => {
+    console.log("Success:", values);
+    form.resetFields();
+    setIsModalVisible(false);
+  };
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -50,16 +49,16 @@ const RegisterUserModal = (props) => {
     <>
       <Button type="primary" onClick={showModal}>
         Create
-           </Button>
+      </Button>
       <Modal
       maskClosable={false}
         visible={isModalVisible}
-        title="New Post"
+        title="Add User"
         onOk={handleOk}
         onCancel={handleCancel}
         footer={[
 
-          <Button key="submit" type="primary" onClick={Submit} htmlType="submit" form="CreateGroup">
+          <Button key="submit" type="primary" htmlType="submit" form="CreateUser">
             Save
                 </Button>
         ]}
@@ -68,14 +67,16 @@ const RegisterUserModal = (props) => {
         <Form
           xs sm md lg xl xxl
           className=" ant-form-vertical"
-          id="CreateGroup"
+          id="CreateUser"
           name="basic"
+          form={form}
           initialValues={{
             remember: true,
 
           }}
-          onFinish={Submit}
+          onFinish={onFinish}
         >
+       
 
           <Row> 
           <Col>
@@ -84,7 +85,7 @@ const RegisterUserModal = (props) => {
                 name="First Name"
                 rules={[{ required: true, message: 'Please input your Firstname!' },{pattern:"^[a-zA-Z ]+$" , message: 'Char allowed only!' }]}
               >
-                <Input value={firstName} onChange={(e) => { setFirstName(e.target.value) }} />
+                <Input/>
               </Form.Item>
           </Col>
           <Col  className="Position1">
@@ -93,7 +94,7 @@ const RegisterUserModal = (props) => {
                 name="Last Name"
                 rules={[{ required: true, message: 'Please input your Lastname!'},{pattern:"^[a-zA-Z ]+$" , message: 'Char allowed only!' }]}
               >
-                <Input value={lastName} onChange={(e) => { setLastName(e.target.value) }}/>
+                <Input/>
               </Form.Item>
           </Col>
           
@@ -116,7 +117,7 @@ const RegisterUserModal = (props) => {
                   },
                 ]}
               >
-                <Input value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                <Input/>
               </Form.Item>
             </Col>
             <Col  className="Position1">
@@ -124,15 +125,12 @@ const RegisterUserModal = (props) => {
                 name="phone"
                 label="Phone Number"
                 hasFeedback
-                rules={[{ required: true, message: 'Please input your phone number!' ,  }]}
-                value={contact} onChange={(e) => { setContact(e.target.value) }}
-              >
+                rules={[{ required: true, message: 'Please input your phone number!' ,  }]}>
                 <InputDigit maxLengths={10} minLengths={10} rules={[{ required: true,
                  message: 'Please input your phone number!'    }]}
                        />
                 
-                {/* 
-                /> */}
+                
                 </Form.Item>
           </Col>
           </Row>
@@ -153,9 +151,7 @@ const RegisterUserModal = (props) => {
                   }
                   filterSort={(optionA, optionB) =>
                     optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
-                  }
-                  value={designation} onChange={setDesignation}
-                >
+                  }>
                   <Option value="Employee">Employee</Option>
                   <Option value="Trainee">Trainee</Option>
                   <Option value="Frontend">Frontend</Option>
@@ -175,7 +171,7 @@ const RegisterUserModal = (props) => {
                 <Select
                   style={{ width: 180 , height: 50}}
                   
-                  value={bloodgroup} onChange={setBloodgroup}
+                  
                   showSearch
                   rules={[{ required: true, message: 'Please select your Blood Group!' }]}
                   placeholder="Type or select"
@@ -205,10 +201,12 @@ const RegisterUserModal = (props) => {
               rules={[{ required: true, message: 'Please select your Gender!' }]}
             >
               <Radio.Group>
-                <Radio value="Male" checked={checked} onChange={(e) => { setChecked(e.target.value) }}>
+                <Radio value="Male" 
+                >
                   Male
                 </Radio>
-                <Radio value="Female" checked={checked} onChange={(e) => { setChecked(e.target.value) }}>
+                <Radio value="Female" 
+                >
                   Female
                 </Radio>
 
@@ -218,9 +216,7 @@ const RegisterUserModal = (props) => {
 
 
           <Row> <Form.Item>
-              <TextArea showCount maxLength={500}  cols={400}  value={texed} 
-                onChange={(e) => {setTexed(e.target.value)}}
-              />
+              <TextArea showCount maxLength={500}  cols={400} />
             </Form.Item> </Row>
           <Row> 
           
@@ -266,7 +262,7 @@ const RegisterUserModal = (props) => {
                   }),
                 ]}
               >
-                <Input.Password value={password} onChange={(e) => { setPassword(e.target.value) }}/>
+                <Input.Password/>
               </Form.Item>
            </Col>
           

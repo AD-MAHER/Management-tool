@@ -14,6 +14,7 @@ font-family: 'Roboto', sans-serif;
 }
 .Header_Logo{
         margin-top:0.5%;
+        margin-left:5px;
         font-family: 'Roboto', sans-serif;
         height: 50px;
         width :200px;
