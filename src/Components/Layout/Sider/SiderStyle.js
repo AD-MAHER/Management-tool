@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const SiderStyle = styled.div` 
-
+z-index:1000;
  height:100%;
  min-width:64px;
     max-width:64px;
@@ -22,7 +22,7 @@ export const SiderStyle = styled.div`
             margin-bottom:3px;
             
             margin-top:3px;
-            margin-left:4px;
+            margin-left:2px;
             min-width:60px;
             max-width:60px;
             

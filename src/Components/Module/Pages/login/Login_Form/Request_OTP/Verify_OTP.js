@@ -1,13 +1,27 @@
-import React from 'react'
-import Form from 'antd/lib/form/Form';
-import Input1 from '../../../../globalComponents/FormComp/Input1';
+import React, { useState } from 'react'
+import { Form, Input } from 'antd';
 import Button1 from '../../../../globalComponents/Button/Button1';
 import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
-import { NavLink } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import LoginPage from '../../LoginPage';
-import InputDigit from '../../../../globalComponents/Input/InputDigit';
+import Auth from "../../../../../../Auth";
+import { onlyDigit } from "../../../../globalComponents/ValidationArray/onlyValidation";
+
 export default function Verify_OTP(props) {
+    const [symbolsArr2] = useState(onlyDigit);
+    const history = useHistory();
+    const [form] = Form.useForm();
+
+    const onFinish = () => {
+        form.resetFields();
+
+          
+        Auth.loginProcess(() => {
+                history.push("/new_pass");
+              });
+
+    };
     return (
         <>
             <LoginPage {...props}>
@@ -19,16 +33,27 @@ export default function Verify_OTP(props) {
 
                     <h3 className="Head1">Enter Your 6digit OTP via mail.</h3>
 
-                    <Form className="FormClass">
+                    <Form className="FormClass"
+                        form={form}
+                        id="verifyotp"
+                        onFinish={onFinish}>
+                        <Form.Item name="Enter OTP" label="Enter&nbsp;OTP" 
+                         onKeyDown={e => symbolsArr2.includes(e.key) && e.preventDefault()}
+                         rules={[{ required: true, message: 'OTP' }]} >
+                            <Input  
+                            autoComplete="off"
+                              maxLength={6} minLength={6} hasFeedback  />
+                        </Form.Item>
 
-                        <Input1 maxLength={6} name="Enter OTP" label="Enter OTP" rules={[{ required: true, message: 'OTP' }
 
-                        ]} pattern="[0-9]*" input={<InputDigit maxLengths={6} minLengths={6} />} />
 
-                        <NavLink to="/new_pass">
-                            <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
-                                className="button_css"
-                                type='button'><span>Verify&nbsp;OTP</span></Button1></NavLink>
+
+
+                        <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
+                            className="button_css" type='primary'
+                            key="submit"
+                            htmlType="submit" form="verifyotp"
+                        >Verify&nbsp;OTP</Button1>
 
 
                     </Form>

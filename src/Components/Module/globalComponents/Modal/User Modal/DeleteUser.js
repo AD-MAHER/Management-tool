@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button } from "antd"
+import { Modal, Button, Tooltip } from "antd"
 import { useDispatch  , useSelector} from "react-redux";
 import { DeleteUsers } from "../../../../../Core/Redux/Action/UserDelAction";
 
@@ -31,9 +31,12 @@ export default function DeleteUser(props) {
     </svg>)
     return (
         <>
-            <span onClick={showModal}>
+        <Tooltip placement="right" title="Delete">
+        <span onClick={showModal}>
                 {deleteicon}
             </span>
+        </Tooltip>
+           
             <Modal
                 centered
                 maskClosable={false}
@@ -52,7 +55,7 @@ export default function DeleteUser(props) {
                 {tabledata.map((val, index) =>
             val.token === (props.tokens) ? (
               <span key={index}>
-               
+              <p>Are you sure to delete this User permently ?</p>
                <span > {users} &nbsp;{`${val.firstName} ${val.lastName}`}</span>
               </span>
             ) : null

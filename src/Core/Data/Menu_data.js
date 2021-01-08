@@ -1,37 +1,37 @@
 //you can modify this according to your requirement
-export const menus=[
+export const menus = [
     {
         //unique key
-        key:"users",
+        key: "users",
         //tooltip display using this
-        name:"Users",
+        name: "Users",
         //render icon key
-        iconName:"usersMenu",
+        iconName: "usersMenu",
         //apply Link using this variable, 
-        routingPath:"/layout/"
+        routingPath: "/layout/users"
     },
     {
-        key:"userGroups",
-        name:"User Groups",
-        iconName:"groupsMenu",
-        routingPath:"/layout/groups"
+        key: "groups",
+        name: "User Groups",
+        iconName: "groupsMenu",
+        routingPath: "/layout/groups"
     },
     {
-        key:"blog",
-        name:"Blog",
-        iconName:"blogMenu",
-        routingPath:"/layout/blog"
+        key: "blog",
+        name: "Blog",
+        iconName: "blogMenu",
+        routingPath: "/layout/blog"
     },
     {
-        key:"chatroom",
-        name:"Chatroom",
-        iconName:"chatroomMenu",
-        routingPath:"/layout/chatroom"
+        key: "chatroom",
+        name: "Chatroom",
+        iconName: "chatroomMenu",
+        routingPath: "/layout/chatroom"
     },
     {
-        key:"taskmanagement",
-        name:"Task Management",
-        iconName:"taskmanagementMenu",
-        routingPath:"/layout/taskmanagement"
+        key: "taskmanagement",
+        name: "Task Management",
+        iconName: "taskmanagementMenu",
+        routingPath: "/layout/taskmanagement"
     },
 ]

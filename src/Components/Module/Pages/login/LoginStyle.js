@@ -1,30 +1,37 @@
 import styled from 'styled-components';
 export const LoginStyle = styled.div` 
+ overflow:hidden;
 .ant-layout{
-    height:100vh;
+    height:100vh ;
     width:100vw;
     background:#222222;
     color:#979797;
 }
 
+
+.ant-form-item-explain.ant-form-item-explain-error{
+    width:360px;
+}
+.F1{
+    color:#1890ff;
+    margin-left:150%;
+}
 .Icon_Class{
   font: 12px/30px;
   
    color: #FFFFFF;
 }
-
    
 .ant-form-item-control-input{
         
         width:375px;
           border:#979797;
-            color:##FFFFFF; 
+            color:#FFFFFF; 
         
         }
        
   .ant-input{
     width:350px;
-
       font-size:14px;
     background:#222222;
     color:#FFFFFF;
@@ -34,8 +41,14 @@ export const LoginStyle = styled.div`
     }
    
   }
+  .forClass{.ant-form-item-label > label{
+        display:none;
+    }}
   .ant-form-item-label > label {
     color: #ffffff;
+    
+   
+    
 }
 .anticon svg {
     display: inline-block;
@@ -44,7 +57,7 @@ export const LoginStyle = styled.div`
     
  .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
       
-        content: '';
+       display: none;
     }
     
     .ant-form-item-required{
@@ -52,14 +65,13 @@ export const LoginStyle = styled.div`
     color:#979797;
     }
     .MainClass{
-        margin-top : 30%;
+        margin-top : 28%;
         margin-left: 10%;
         font-size : 16px;
         color: #E8E8E8;
         width:100%;
         overflow-y:hidden;
     }
-
     .Logo1{
         height: 150px;
         width :350px;
@@ -69,28 +81,36 @@ export const LoginStyle = styled.div`
         width :200px;
         display:none;
     }
-
     .button_css{
         font-size:16 bold #FFFFFF;
        
     }
-
-    .loginClass{
-        margin-top : 30%;
-        margin-left: 20%;
-        margin-right:5%;
+    .right_div{
+        width: 100%;
+       height:100%;
+        display: flex;
+        flex-direction:column;
+        justify-content:space-around-center;
+   
+    }
+    .loginClass{ 
+        margin-top : 28%;
+        
+        margin-left: 30%;
+        
+       
         font-size : 16px;
         color: #E8E8E8;
-        height:40%;
+        height:100%;
+        width:100%;
           
     }
-
     .FormClass{
-            width:20%
+            width:20%;
+            font-size : 16px;
+        color: #E8E8E8;
     }
-
   
-
     .Head1{
         font-weight: bold;
         font-size:16px;
@@ -101,14 +121,13 @@ export const LoginStyle = styled.div`
         font-weight: bold;
         font-size:30px;
         color:#E5E5E5;
-
     }
     .Forgot{
         width:100%;
         margin-left:238px
     }
     
-    @media (max-width: 767px) {
+     @media (max-width: 767px) {
     .left_div {
         display:none;
     }
@@ -118,13 +137,13 @@ export const LoginStyle = styled.div`
         width :200px;
         display:block;
     }
-            .
+            
     .Head1{
         font-weight: bold;
         font-size:16px;
         color:#57A1D8;
         font-style:Roboto;
-        margin-top:-60px;
+        margin-top:-0px;
     }
     .Head2{
         font-weight: bold;
@@ -134,13 +153,11 @@ export const LoginStyle = styled.div`
         margin-bottom:10px;
         width:100vw;
     }
-
     .FormClass{
             width:100%;
             
-            margin-top:-10px;
+      
     }
-
     .Forgot{
         width:100%;
         float:right
@@ -155,76 +172,143 @@ export const LoginStyle = styled.div`
         
         width:250px;
           border:#E8E8E8;
-            color:##FFFFFF; 
+            color:#FFFFFF; 
         
         }
-
-
-    .right_div{
-        width: 100%;
-       position:fixed;
-        margin:0;
-        pading:0;
-   
-    }
+    
     .Forgot{
         margin-right:-150px;
         
-
        
        
     }
     
     .loginClass{
-        margin-top : 50%;
-        margin-left: 30%;
+       
         font-size : 16px;
         color: #E8E8E8;
         height:10%;
         width:50vw;
+        margin-top : 25%;
+        margin-bottom : 25%;
+        margin-left: 20%;
+        margin-right: 20%;
+       
+    }
+    
+  
+ }
+
+ @media (max-width: 768px) {
+    .left_div {
+        display:none;
+    }
+   
+    .Logo2{
+        height: 50px;
+        width :200px;
+        display:block;
+    }
+            
+    .Head1{
+        font-weight: bold;
+        font-size:16px;
+        color:#57A1D8;
+        font-style:Roboto;
+        margin-top:-0px;
+    }
+    .Head2{
+        font-weight: bold;
+        font-size:25px;
+        color:#E5E5E5;
+        margin-top:-20px;
+        margin-bottom:10px;
+        width:100vw;
+    }
+    .FormClass{
+            width:100%;
+            
+      
+    }
+    .Forgot{
+        width:100%;
+        float:right
+    }
+    .ant-input{
+    width:260px;
+    
+      
+    }
+   
+    .ant-form-item-control-input{
+        
+        width:250px;
+          border:#E8E8E8;
+            color:#FFFFFF; 
+        
+        }
+    
+    .Forgot{
+        margin-right:-150px;
+        
+       
+       
+    }
+    
+    .loginClass{
+       
+        font-size : 16px;
+        color: #E8E8E8;
+        height:10%;
+        width:50vw;
+        margin-top : 50%;
+        margin-bottom : 25%;
+        margin-left: 25%;
+
        
     }
     
    
     .Forgot{
         
+        margin-right:-72%;
         
         
     }
  }
 
-
- @media  only (max-width:  480px) {
+ 
+ @media  (max-width:  320px) {
     .loginClass{
-        margin-top : 50%;
-        margin-left: 20%;
-        font-size : 16px;
-        color: #E8E8E8;
-        height:10%;
-        width:50vw;
        
-    }
-    .left_div {
-        display:none;
-    }
+       font-size : 16px;
+       color: #E8E8E8;
+       height:10%;
+       width:50vw;
+       margin-top : 50%;
+       margin-bottom : 25%;
+       margin-left: 20%;
+       margin-right: 20%;
+      
+   }
     
- }
- @media (max-width  576px ){
-    .loginClass{
-        margin-top : 50%;
-        margin-left: 10%;
-        font-size : 16px;
-        color: #E8E8E8;
-        height:10%;
-        width:50vw;
+ } 
+ @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) 
+   {    
+       .loginClass{
        
-    }
-    .left_div {
-        display:none;
-    }
- }
-}
-
-
+       font-size : 16px;
+       color: #E8E8E8;
+       height:10%;
+       width:50vw;
+       margin-top : 37%;
+   
+       margin-left: 15%;
+      
+      
+   }
+  
+ }  
+ 
  
 `;

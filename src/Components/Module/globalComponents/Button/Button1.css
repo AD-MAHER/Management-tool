@@ -81,6 +81,13 @@
     align-items: center;
     
   }
+  .btn-medium1 {
+    padding: 10px 140px;
+    font-size: 12px;
+    margin-top: 0;
+   align-items: center;
+    
+  }
   
   .btn-large {
     padding: 15px 30px;
@@ -96,6 +103,13 @@
   @media (max-width: 767px) {
     .btn-medium {
       padding: 10px 100px;
+      font-size: 12px;
+      margin-top: 0;
+     align-items: center;
+      
+    }
+    .btn-medium1 {
+      padding: 10px 77px;
       font-size: 12px;
       margin-top: 0;
      align-items: center;

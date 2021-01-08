@@ -9,8 +9,8 @@ font-family: 'Roboto', sans-serif;
 }
 
 .logo-div{
-    float:Left;
-    margin-left:-3%;
+    float:left;
+   
 }
 .Header_Logo{
         margin-top:0.5%;
@@ -24,7 +24,7 @@ font-family: 'Roboto', sans-serif;
 
 .avatar-div{
     float:Right;
-    margin-Right:-2.5%;
+   
     font-family: 'Roboto', sans-serif;
 }
 .ant-avatar{

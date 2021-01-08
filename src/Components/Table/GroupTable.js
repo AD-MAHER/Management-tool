@@ -28,7 +28,9 @@ const GroupTable = () => {
       <div>
 
 
-        <Table scroll={{ y: 370 }} loading={false} dataSource={grouptabledata} >
+        <Table 
+        scroll={{ y: 370 }} 
+        loading={false} dataSource={grouptabledata} >
 
 
           <Column ellipsis={true} sorter= {(a, b) => a.groupName.length - b.groupName.length} title="Group Name" dataIndex="groupName" key="groupName"

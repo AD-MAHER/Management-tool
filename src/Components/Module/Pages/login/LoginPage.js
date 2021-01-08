@@ -12,7 +12,7 @@ export default function LoginPage(props) {
 
 
                     <Row >
-                        <Col span={12} className="left_div">
+                        <Col xs={0} sm={0} md={12} lg={12} xl={12}className="left_div">
                             <div className="MainClass">
                                 <img className="Logo1" src={Zeronsec_Logo} alt="Zeronsec" />
 
@@ -28,7 +28,7 @@ export default function LoginPage(props) {
                             </div>
                         </Col>
 
-                        <Col span={12} className="right_div">
+                        <Col xs={12} sm={24} md={12} lg={12} xl={12} className="right_div">
                           
                             
                             {props.children}

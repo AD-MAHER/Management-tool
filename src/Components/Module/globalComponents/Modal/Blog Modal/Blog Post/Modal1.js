@@ -5,11 +5,11 @@ const Modal1 = () => {
 
   const { TextArea } = Input;
   const children = [];
-
+  const [form] = Form.useForm();
 
   function handleChange(value) {
 
-    // console.log(` ${value}`  );
+
   }
 
   const props = {
@@ -44,9 +44,12 @@ const Modal1 = () => {
     setIsModalVisible(false);
   };
 
-  const FinishValue = values => {
-    console.log(values)
-  }
+  
+  const onFinish = (values) => {
+    console.log("Success:", values);
+    form.resetFields();
+    setIsModalVisible(false);
+  };
 
   return (
     <>
@@ -61,7 +64,7 @@ const Modal1 = () => {
         onCancel={handleCancel}
         footer={[
 
-          <Button key="submit" type="primary" onClick={handleOk} htmlType="submit" form="CreatePost" >
+          <Button key="submit" type="primary"  htmlType="submit" form="CreatePost" >
             Save
                 </Button>,
         ]}
@@ -72,10 +75,13 @@ const Modal1 = () => {
           id='CreatePost'
           className=" ant-form-vertical"
           name="basic"
-          onFinish={FinishValue}
+          onFinish={onFinish}
           initialValues={{
             remember: true,
           }}
+
+          form={form}
+        
         >
           <Row>
             <Form.Item
@@ -120,7 +126,11 @@ const Modal1 = () => {
               },
             ]}>
             <TextArea
-              rows={5}
+          
+              showCount 
+               maxLength={500}  
+                cols={400}
+                autoSize={{ minRows: 3, maxRows: 3 }}
               placeholder="Enter Post Content (This is resizable text area)"
             />
           </Form.Item>

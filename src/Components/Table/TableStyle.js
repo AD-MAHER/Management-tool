@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const TableTheme = styled.div` 
-  
-    
+overflow:auto;
+  transition:all 0.0s; 
 .ant-table-cell{
     background-color: #222222;
 color : #FFFFFF;
@@ -10,10 +10,15 @@ color : #FFFFFF;
 .ant-spin-container {
   
 }
+
+
+ 
+
+
 .ant-table-tbody > tr > td {
-    border-bottom: none;
-    -webkit-transition: none; 
- transition: none; 
+    border-bottom: all 0.0s; 
+    -webkit-transition:all 0.0s; 
+ transition: all 0.0s;  
 }
 .ant-table-thead > tr > th:hover {
     background-color:#172B3A;

@@ -34,7 +34,8 @@ const UserTable = () => {
       <div>
 
 
-        <Table scroll={{ y: 370 }} 
+        <Table 
+        scroll={{ y: 370 }} 
         pagination="fixed"
         height="fixed"
         dataSource={tabledata} >
@@ -98,7 +99,9 @@ const UserTable = () => {
           />
           <Column title="Action" dataIndex="token" key="Action" render={token =>
             <>
-              <span>{editicon}&nbsp; &nbsp;</span>
+             <Tooltip placement="left" title="edit">
+             <span>{editicon}&nbsp; &nbsp;</span>
+             </Tooltip>
               <DeleteUser tokens={token}
 
               />

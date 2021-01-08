@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+body{
+    height:100vh;
+    width:100vw;
+   
+}
  ::-webkit-scrollbar {
  width: 3px;
  
@@ -8,6 +13,17 @@ export const GlobalStyle = createGlobalStyle`
 ::-webkit-scrollbar-thumb {
  background: #429FE4; 
 }
+
+.ant-form-item-has-error .ant-input, .ant-form-item-has-error .ant-input-affix-wrapper, .ant-form-item-has-error .ant-input:hover, .ant-form-item-has-error .ant-input-affix-wrapper:hover {
+    background-color: #222222;
+    border-color: #ff4d4f;
+}
+
+.ant-modal-wrap {
+    
+    backdrop-filter: blur(1px);
+}
+
 
 .ant-spin-nested-loading {
     transition:none;
@@ -90,7 +106,29 @@ display:none;
 
 .ant-select.selector{
     display:none;
+    .ant-select-selection-item {
+    background-color:none;
+    border-radius: 0px;
+    border: none;
+    color: #8FA8BA;
 }
+}
+
+.ant-modal-body{ .UserForm{
+    
+        .ant-form{ 
+            .ant-select-selector {
+                height:35px;
+               .ant-select-selection-item{
+        background-color: transparent;
+        text-align:center;
+        
+    border-radius: 0px;
+    border: none;
+    
+    }  
+            }}
+}}
 >span.ant-select-selection-item {
     background-color:#222222;
 }
@@ -121,16 +159,25 @@ display:none;
 
 }
 
+.ant-form-item-has-error .ant-select:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+    background-color: #222222; 
+    border-color: #ff4d4f !important;
+    overflow:auto;
+}
 .Position1{
     margin-left:80px;
 }
 .Position2{
     margin-left:65px;
 }
+.Position3{
+    margin-left:25px;
+}
 .ant-select-item-option-active{
     background:#172B3A;
     
 }
+
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
     color: rgba(0, 0, 0, 0.85);
     font-weight: 600;
@@ -206,7 +253,6 @@ display:none;
     outline: none;
    
 }  
-
             .ant-form{
              
                 .ant-radio-inner{
@@ -257,7 +303,11 @@ display:none;
                   letter-spacing:0.75px;
                   font-size:12px;
                   font-family:roboto;
+
               }
+              .ant-form-item .ant-input-textarea-show-count::after {
+   color:#9EA4A9
+}
               .ant-upload-text-icon{
                       display:none;
                   }
@@ -299,6 +349,7 @@ display:none;
                         color: #E8E8E8;
                         border-radius:5px;
                         height:50px;
+                        overflow:auto;
                         .ant-select-selection-item{
                             background-color:#292A2B;
                             border-radius:8px;
@@ -410,7 +461,7 @@ display:none;
         .ant-modal-wrap {
                   z-index: 1000;
                   margin-top:0;
-                ${'' /* overflow:scroll; */}
+               
            
                 }
                 .ant-modal-header{

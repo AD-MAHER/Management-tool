@@ -89,6 +89,9 @@ export default function Blog() {
                                 </Tooltip>
 
         <Modal
+       
+        centered
+                    maskClosable={false}
                     width={800}
                     title="View Post"
                     visible={isModalVisible}

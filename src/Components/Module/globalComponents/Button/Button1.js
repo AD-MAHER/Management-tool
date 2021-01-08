@@ -16,6 +16,7 @@ const SIZES =[
     "btn-large",
     "btn-small",
     "btn-medium",
+    "btn-medium1",
 ];
 function Submit1({children , type, onClick , buttonStyle , buttonSize}){
     const checkButtonStyle = STYLES.includes(buttonStyle)

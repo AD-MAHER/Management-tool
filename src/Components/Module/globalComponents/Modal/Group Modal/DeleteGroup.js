@@ -50,14 +50,14 @@ export default function DeleteGroup(props) {
                     <Button key="back" onClick={handleDelete}>
                         Delete
             </Button>,
-                    <Button key="submit" type="primary" onClick={handleCancel}>
+                    <Button key="submit" type="primary"  onClick={handleCancel}>
                         Cancel
             </Button>]}>
 
                 {grouptabledata.map((val, index) =>
                     val.token === (props.tokens) ? (
                         <span key={index}>
-
+                        <p>Are you sure to delete this Group permently ?</p>
                             <span > {groups} &nbsp;{`${val.groupName}`}</span>
                         </span>
                     ) : null

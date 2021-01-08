@@ -37,9 +37,10 @@ const CreateGroupModal = () => {
                 Create
            </Button>
             <Modal
+                centered
                 maskClosable={false}
                 visible={isModalVisible}
-                title="New Post"
+                title="Create Group"
                 onOk={handleOk}
                 onCancel={handleCancel}
                 footer={[
@@ -51,6 +52,7 @@ const CreateGroupModal = () => {
             >
 
                 <Form
+
                     xs sm md lg xl xxl
                     className=" ant-form-vertical"
                     id="CreateGroup"
@@ -64,7 +66,8 @@ const CreateGroupModal = () => {
                     <Form.Item>
                         <span className="CreateGroupElement">Group Name</span><br /><br />
 
-                        <Input type="text" value={groupName} onChange={(e) => { setGroupName(e.target.value) }} placeholder="Enter Group Name" />
+                        <Input type="text" value={groupName} onChange={(e) => { setGroupName(e.target.value) }}
+                            placeholder="Enter Group Name" />
                     </Form.Item>
 
                     <Form.Item>
