@@ -1,23 +1,40 @@
 import React from 'react'
 import { Form } from 'antd';
-import { Input } from 'antd';
+import { Input , message} from 'antd';
 import Button1 from '../../globalComponents/Button/Button1';
 import Zeronsec_Logo from "../../../../Core/Logo/Zeronsec_logo.svg"
 import LoginPage from './LoginPage';
 import Auth from "../../../../Auth";
 import { useHistory } from "react-router-dom";
+import axios from 'axios';
 export default function LoginForm(props) {
   const history = useHistory();
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-
+    console.log(values);
     form.resetFields();
+    axios.post(`http://10.1.1.20:8080/login` , values).then(
+      response => {
+        console.log(response.data.status);
+        if (response.data.status === true) {
+          return (
+            Auth.login(() => {
+              history.push("/layout/users/");
+              message.success('You have successfully logged in')
+            })
 
-    Auth.login(() => {
-      history.push("/layout/users/");
-    });
+          )
+        } else {
+          return (
+            message.error('Please Enter Valid Username & Password')
+          );
+      };
+    }
+    )
   };
+  
+    
 
   return (
     <LoginPage  {...props}>
@@ -41,23 +58,21 @@ export default function LoginForm(props) {
           onFinish={onFinish}
         >
 
-          <Form.Item name="email" label="Email :" rules={[
-            {
-              type: 'email',
-              message: 'The input is not valid E-mail!',
-            },
+<Form.Item name="username" label="User Name :" rules={[
+           
             {
               required: true,
-              message: 'Please input your E-mail!',
+              message: 'Please input your username',
             },
           ]} >
 
-            <Input />
+            <Input placeholder="Enter Your User Name"/>
           </Form.Item>
+         
 
 
 
-          <Form.Item className="logpass" name="Password" label="Password :"
+          <Form.Item className="logpass" name="password" label="Password :"
             rules={[
               {
                 required: true,
@@ -66,7 +81,7 @@ export default function LoginForm(props) {
 
             ]} >
 
-            <Input.Password />
+            <Input.Password  placeholder="Enter Your Password"/>
           </Form.Item>
 
           <p className='F1'

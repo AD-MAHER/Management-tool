@@ -6,6 +6,33 @@ body{
     width:100vw;
    
 }
+
+
+
+.ant-message-notice-content{
+    
+    background-color:#222222;
+  
+   
+    font-family:Roboto;
+   font-weight:bold;
+   font-size:15px;
+   height:50px;
+   .ant-message-error{
+    
+    color:#dc3545;
+    backdrop-filter: blur(8px);
+    .ant-message-notice-content{
+        border:2px solid  #dc3545;}
+   }
+   .ant-message-success{
+     
+    color: #04C35C;
+    .ant-message-notice-content{
+        border:2px solid #04C35C;}
+   }
+
+}
  ::-webkit-scrollbar {
  width: 3px;
 background-color:#222222;
@@ -177,14 +204,14 @@ display:none;
     overflow:auto;
 }
 .Position1{
-    margin-left:80px;
+    margin-left:23%;
 }
 .Position2{
-    margin-left:15%;
+    margin-left:10%;
     ${'' /* margin-bottom:-20%; */}
 }
 .Position3{
-    margin-left:15%;
+    margin-left:20%;
     
 }
 .Position4{
@@ -324,7 +351,8 @@ display:none;
                   color: #E5E5E5;
                   letter-spacing:0.75px;
                   font-size:12px;
-                  font-family:roboto;
+                  font-family:Roboto;
+
 
               }
               .ant-form-item .ant-input-textarea-show-count::after {
@@ -352,8 +380,9 @@ display:none;
                   }
               .ant-input:placeholder-shown{
                 letter-spacing:0.35px;
-                      font-family:Roboto-Light;
+                      font-family:Roboto;
                       color:#FFFFFF ;
+                      
                       font-size:12px;
                   }
               .ant-form-item-required{
@@ -581,7 +610,7 @@ display:none;
                   color: #E5E5E5;
                   letter-spacing:0.75px;
                   font-size:12px;
-                  font-family:roboto;
+                  font-family:Roboto;
                   margin-bottom:-50vh;
                   margin-top:-50vh;
               }

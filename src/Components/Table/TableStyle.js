@@ -54,7 +54,7 @@ max-height:10px;
 
 .ant-pagination{
     background-color: #222222;
-    
+   z-index:1000; 
   
 color : #FFFFFF;
 }
@@ -149,13 +149,17 @@ color : #FFFFFF;
   background-clip: padding-box;
 }
 
-@media only screen and (min-width: 992px) {
-    
+@media only screen and (max-width: 640px) {
+  
 }
 
 
-@media only screen and (min-width: 768px) {
-   
+@media only screen and (max-width: 768px) {
+    .ant-table-container{
+  height:450px;
+  border:none;
+  background-color:#222222;
+}
 }
 
 
