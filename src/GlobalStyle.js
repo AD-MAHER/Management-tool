@@ -180,8 +180,8 @@ display:none;
     margin-left:80px;
 }
 .Position2{
-    margin-left:65px;
-    margin-bottom:-20%;
+    margin-left:15%;
+    ${'' /* margin-bottom:-20%; */}
 }
 .Position3{
     margin-left:15%;
@@ -189,11 +189,11 @@ display:none;
 }
 .Position4{
     margin-left:17%;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-bottom:-20%;
 }
 .UserFormMargin{
-    margin-top:-5%;
+    margin-top:-3%;
 }
 .ant-select-item-option-active{
     background:#172B3A;

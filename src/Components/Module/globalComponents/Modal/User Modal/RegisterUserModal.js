@@ -79,7 +79,7 @@ const RegisterUserModal = (props) => {
                   rules={[{ required: true, message: 'Please input your Firstname!' },
                   { pattern: "^[a-zA-Z ]+$", message: 'Char allowed only!' }]}
                 >
-                  <Input type="text"
+                  <Input type="text" placeholder="Enter Your First Name"
                     onKeyDown={e => symbolsArr.includes(e.key) && e.preventDefault()} hasFeedback />
                 </Form.Item>
               </Col>
@@ -90,7 +90,7 @@ const RegisterUserModal = (props) => {
                   name="Last Name"
                   rules={[{ required: true, message: 'Please input your Lastname!' }, { pattern: "^[a-zA-Z ]+$", message: 'Char allowed only!' }]}
                 >
-                  <Input type="text"
+                  <Input type="text" placeholder="Enter Your Last Name" 
                     onKeyDown={e => symbolsArr.includes(e.key) && e.preventDefault()} hasFeedback/>
                 </Form.Item>
               </Col>
@@ -103,6 +103,7 @@ const RegisterUserModal = (props) => {
                 <Form.Item
                   name="email"
                   label="E-mail"
+                  
                   rules={[
                     {
                       type: 'email',
@@ -114,18 +115,19 @@ const RegisterUserModal = (props) => {
                     },
                   ]}
                 >
-                  <Input />
+                  <Input placeholder="Enter Your Email Address" />
                 </Form.Item>
               </Col>
               <Col className="Position1">
 
                 <Form.Item name="phone"
-                  label="Phone Number"
+                  label="Phone Number" 
                   onKeyDown={e => symbolsArr2.includes(e.key) && e.preventDefault()}
                   hasFeedback
                   rules={[{ required: true, message: 'Please input your phone number!', }]}>
                   <Input
-                    autoComplete="off"
+                    autoComplete="off" 
+                    placeholder="Enter Your Contact Number"
                     maxLength={10} minLength={10} hasFeedback />
                 </Form.Item>
 
@@ -220,7 +222,7 @@ const RegisterUserModal = (props) => {
             label="Address" hasFeedback
              rules={[{ required: true, message: 'Please enter your Address!' }]} >
               <TextArea showCount
-            
+             placeholder="Enter Your Address"
                 maxLength={500}
                 cols={400}
                 rules={[{ required: true, message: 'Please enter your Address!' }]}
@@ -242,7 +244,7 @@ const RegisterUserModal = (props) => {
                   ]}
 
                 >
-                  <Input.Password />
+                  <Input.Password   placeholder="Enter Your Password"/>
                 </Form.Item>
 
               </Col>
@@ -269,7 +271,7 @@ const RegisterUserModal = (props) => {
                     }),
                   ]}
                 >
-                  <Input.Password />
+                  <Input.Password placeholder="Confirm Your Password" />
                 </Form.Item>
               </Col>
 
