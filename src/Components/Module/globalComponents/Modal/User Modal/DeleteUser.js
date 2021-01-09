@@ -31,8 +31,8 @@ export default function DeleteUser(props) {
     </svg>)
     return (
         <>
-        <Tooltip placement="right" title="Delete">
-        <span onClick={showModal}>
+        <Tooltip placement="topLeft" title="Delete">
+        <span style={{cursor:'pointer'}} onClick={showModal}>
                 {deleteicon}
             </span>
         </Tooltip>

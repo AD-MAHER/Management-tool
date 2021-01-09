@@ -57,7 +57,7 @@ export default function LoginForm(props) {
 
 
 
-          <Form.Item name="Password" label="Password :"
+          <Form.Item className="logpass" name="Password" label="Password :"
             rules={[
               {
                 required: true,
@@ -66,7 +66,7 @@ export default function LoginForm(props) {
 
             ]} >
 
-            <Input />
+            <Input.Password />
           </Form.Item>
 
           <p className='F1'

@@ -33,8 +33,8 @@ export default function DeleteGroup(props) {
     </svg>)
     return (
         <>
-            <Tooltip title="Delete" placement="right">
-            <span onClick={showModal}>
+            <Tooltip title="Delete" placement="topLeft">
+            <span style={{cursor:'pointer'}} onClick={showModal}>
                 {deleteicon}
             </span>
             </Tooltip>

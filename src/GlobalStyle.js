@@ -8,10 +8,11 @@ body{
 }
  ::-webkit-scrollbar {
  width: 3px;
- 
+background-color:#222222;
 }
 ::-webkit-scrollbar-thumb {
- background: #429FE4; 
+ background: #429FE4;
+  
 }
 
 .ant-form-item-has-error .ant-input, .ant-form-item-has-error .ant-input-affix-wrapper, .ant-form-item-has-error .ant-input:hover, .ant-form-item-has-error .ant-input-affix-wrapper:hover {
@@ -51,7 +52,7 @@ body{
    border:0.1px solid #222222;
    border-radius:1px;
    margin-right:10px;
-   display:
+
 }
 .ant-popover-buttons> .ant-btn:hover{
     background-color:#172B3A;
@@ -93,6 +94,8 @@ display:none;
 }
 .ant-input-affix-wrapper{
     background:#222222;
+    border: 1px solid rgb(232,232,232,17%);
+    border-radius:5px;
 :hover{
     background:#222222;
 }}
@@ -114,26 +117,35 @@ display:none;
 }
 }
 
+/* User Form */
 .ant-modal-body{ .UserForm{
     
         .ant-form{ 
             .ant-select-selector {
                 height:35px;
+                display: flow-root;
                .ant-select-selection-item{
         background-color: transparent;
         text-align:center;
-        
+           
     border-radius: 0px;
     border: none;
     
     }  
-            }}
+            }
+            .ant-form-item-has-error .ant-input, .ant-form-item-has-error .ant-input-affix-wrapper, .ant-form-item-has-error .ant-input:hover, .ant-form-item-has-error .ant-input-affix-wrapper:hover {
+    background-color: #222222;
+    border-color: #ff4d4f;
+}
+}
 }}
 >span.ant-select-selection-item {
     background-color:#222222;
 }
     .ant-select-selection-item {
   background:transparent;
+
+  text-align:left;
     }
 
 
@@ -169,9 +181,19 @@ display:none;
 }
 .Position2{
     margin-left:65px;
+    margin-bottom:-20%;
 }
 .Position3{
-    margin-left:25px;
+    margin-left:15%;
+    
+}
+.Position4{
+    margin-left:17%;
+    margin-top: 2%;
+    margin-bottom:-20%;
+}
+.UserFormMargin{
+    margin-top:-5%;
 }
 .ant-select-item-option-active{
     background:#172B3A;
@@ -440,6 +462,18 @@ display:none;
 .Position2{
     margin-left:0px;
 }
+.Position3{
+    margin-left:0%;
+    
+}
+.Position4{
+    margin-left:0%;
+    margin-top: 2%;
+    margin-bottom:-10%;
+}
+.UserFormMargin{
+    margin-top:-5%;
+}
         .ant-modal-body{
            background:#292A2B;
            overflow:scroll;
@@ -578,7 +612,7 @@ display:none;
                       font-family:Roboto-Light;
                       color: #FFFFFF;
                       font-size:12px;
-                      b
+                      
                   }
               .ant-form-item-required{
                   color:#E5E5E5;

@@ -35,7 +35,7 @@ export default function DeletePost (props) {
         return (
 
             <>
-                <span onClick={showModal}>
+                <span style={{cursor:'pointer'}} onClick={showModal}>
                     {deleteicon}
                 </span>
                 <Modal

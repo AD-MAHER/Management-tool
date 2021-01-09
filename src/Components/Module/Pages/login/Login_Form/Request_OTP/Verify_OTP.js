@@ -37,9 +37,10 @@ export default function Verify_OTP(props) {
                         form={form}
                         id="verifyotp"
                         onFinish={onFinish}>
+
                         <Form.Item name="Enter OTP" label="Enter&nbsp;OTP" 
                          onKeyDown={e => symbolsArr2.includes(e.key) && e.preventDefault()}
-                         rules={[{ required: true, message: 'OTP' }]} >
+                         rules={[{ required: true, message: 'OTP is required' }]} >
                             <Input  
                             autoComplete="off"
                               maxLength={6} minLength={6} hasFeedback  />

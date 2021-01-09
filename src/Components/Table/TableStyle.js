@@ -1,22 +1,34 @@
 import styled from 'styled-components';
 export const TableTheme = styled.div` 
-overflow:auto;
+
   transition:all 0.0s; 
+.ant-table-container{
+  height:425px;
+  border:none;
+  background-color:#222222;
+}
+.ant-table-cell-scrollbar{
+box-shadow:none;
+-webkit-box-shadow: none; 
+}
+
+
+.ant-table-wrapper{
+    width:98%;
+}
 .ant-table-cell{
     background-color: #222222;
 color : #FFFFFF;
+border:none;
 
 }
-.ant-spin-container {
-  
+
+.ant-table-header{
+    border-bottom:1px solid #FFFFFF;
+   
 }
-
-
- 
-
-
 .ant-table-tbody > tr > td {
-    border-bottom: all 0.0s; 
+    border-bottom: all 0.0px; 
     -webkit-transition:all 0.0s; 
  transition: all 0.0s;  
 }
@@ -42,6 +54,8 @@ max-height:10px;
 
 .ant-pagination{
     background-color: #222222;
+    
+  
 color : #FFFFFF;
 }
 .ant-pagination-item-link{

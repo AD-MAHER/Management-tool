@@ -24,7 +24,7 @@ const GroupTable = () => {
 
 
   return (
-    <TableTheme>
+    <TableTheme scroll>
       <div>
 
 
@@ -44,13 +44,13 @@ const GroupTable = () => {
 
 
           />
-          <Column ellipsis={true} title="Group Type" dataIndex="groupType" key="groupType"
+          <Column   ellipsis={true} title="Group Type" dataIndex="groupType" key="groupType"
             render={groupType => (
               <Tooltip placement="topLeft" title={groupType}>
                 {groupType}
               </Tooltip>)} />
 
-          <Column ellipsis={true} title="Created At" dataIndex="createdAt" key="createdAt"
+          <Column  ellipsis={true} title="Created At" dataIndex="createdAt" key="createdAt"
 
             render={createdAt => (
               <>
@@ -62,13 +62,13 @@ const GroupTable = () => {
               </>
             )} />
          
-          <Column title="Action" dataIndex="token" key="Action" render={(token) =>
+          <Column  title="Action" dataIndex="token" key="Action" render={(token) =>
             <>
-              <Tooltip placement="left" title="Edit">
-              <span>{editicon}&nbsp; &nbsp;</span>
+              <Tooltip placement="topRight" title="Edit">
+              <span style={{cursor:'pointer'}}>{editicon}&nbsp; &nbsp;</span>
               </Tooltip>
                      
-                <DeleteGroup tokens={token} />
+                <DeleteGroup  tokens={token} />
                 
               
             </>} />

@@ -31,17 +31,17 @@ const UserTable = () => {
 
   return (
     <TableTheme>
-      <div>
+      <>
 
 
         <Table 
-        scroll={{ y: 370 }} 
-        pagination="fixed"
-        height="fixed"
+       scroll={{y:370 }}
+      
         dataSource={tabledata} >
 
         
-             <Column width={100} title="Name" key="Name"
+       
+            <Column   title="Name" key="Name"
               ellipsis={true} dataIndex="token"
               sorter= {(a, b) => a.firstName.length - b.lastName.length}
               render={ token => (
@@ -76,12 +76,12 @@ const UserTable = () => {
 
 
           />
-          <Column ellipsis={true} title="Last Login" dataIndex="lastLogin" key="lastLogin" className="Last-Log"
+          <Column   ellipsis={true} title="Last Login" dataIndex="lastLogin" key="lastLogin" className="Last-Log"
             render={lastLogin => (
               <Tooltip placement="topLeft" title={lastLogin}>
                 {lastLogin}
               </Tooltip>)} />
-          <Column ellipsis={true} title="Email" dataIndex="email" key="email"
+          <Column   ellipsis={true} title="Email" dataIndex="email" key="email"
 
             render={email => (
               <>
@@ -99,20 +99,21 @@ const UserTable = () => {
           />
           <Column title="Action" dataIndex="token" key="Action" render={token =>
             <>
-             <Tooltip placement="left" title="edit">
-             <span>{editicon}&nbsp; &nbsp;</span>
+             <Tooltip placement="topRight" title="edit">
+             <span style={{cursor:'pointer'}}>{editicon}&nbsp; &nbsp;</span>
              </Tooltip>
               <DeleteUser tokens={token}
 
               />
             </>} />
 
+           
 
 
         </Table>
 
 
-      </div>
+      </>
     </TableTheme>
   );
 };

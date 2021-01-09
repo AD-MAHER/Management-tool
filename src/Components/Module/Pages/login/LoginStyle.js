@@ -11,6 +11,7 @@ export const LoginStyle = styled.div`
 
 .ant-form-item-explain.ant-form-item-explain-error{
     width:360px;
+    font-family:Roboto;
 }
 .F1{
     color:#1890ff;
@@ -21,7 +22,14 @@ export const LoginStyle = styled.div`
   
    color: #FFFFFF;
 }
-   
+   .logpass{
+       .ant-input-affix-wrapper{
+           width:94%;
+           border-radius:1.5px;
+           border:0.5px solid white;
+
+       }
+   }
 .ant-form-item-control-input{
         
         width:375px;
@@ -131,7 +139,17 @@ export const LoginStyle = styled.div`
     .left_div {
         display:none;
     }
-   
+    .F1{
+    color:#1890ff;
+    margin-left:70%;
+    font-family:Roboto;
+}
+.logpass{
+       .ant-input-affix-wrapper{
+           width:105%;
+           
+       }
+   }
     .Logo2{
         height: 50px;
         width :200px;

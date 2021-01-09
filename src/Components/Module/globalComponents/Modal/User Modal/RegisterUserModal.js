@@ -69,34 +69,36 @@ const RegisterUserModal = (props) => {
           >
 
 
-            <Row>
+            <Row className="UserFormMargin">
               <Col>
                 <Form.Item
                   label="Firstname"
                   name="First Name"
+                  hasFeedback
                   type="text"
                   rules={[{ required: true, message: 'Please input your Firstname!' },
                   { pattern: "^[a-zA-Z ]+$", message: 'Char allowed only!' }]}
                 >
                   <Input type="text"
-                    onKeyDown={e => symbolsArr.includes(e.key) && e.preventDefault()} />
+                    onKeyDown={e => symbolsArr.includes(e.key) && e.preventDefault()} hasFeedback />
                 </Form.Item>
               </Col>
               <Col className="Position1">
                 <Form.Item
                   label="Lastname"
+                  hasFeedback
                   name="Last Name"
                   rules={[{ required: true, message: 'Please input your Lastname!' }, { pattern: "^[a-zA-Z ]+$", message: 'Char allowed only!' }]}
                 >
                   <Input type="text"
-                    onKeyDown={e => symbolsArr.includes(e.key) && e.preventDefault()} />
+                    onKeyDown={e => symbolsArr.includes(e.key) && e.preventDefault()} hasFeedback/>
                 </Form.Item>
               </Col>
 
             </Row>
 
 
-            <Row>
+            <Row className="UserFormMargin"> 
               <Col>
                 <Form.Item
                   name="email"
@@ -130,10 +132,11 @@ const RegisterUserModal = (props) => {
               </Col>
             </Row>
 
-            <Row>
+            <Row className="UserFormMargin">
               <Col>
                 <Form.Item name="Designation"
-                  label="designation">
+                  label="designation"
+                  rules={[{ required: true, message: 'Please select your Designation!' }]}>
 
                   <Select
                     style={{ width: 180 }}
@@ -156,7 +159,7 @@ const RegisterUserModal = (props) => {
                   </Select>
                 </Form.Item>
               </Col>
-              <Col className="Position2">
+              <Col className="Position4">
                 <Form.Item
                   name="Blood Group"
                   label="Blood Group"
@@ -193,15 +196,15 @@ const RegisterUserModal = (props) => {
             <Row><Form.Item
               name="Gender"
               label="Gender"
-
+                        
               rules={[{ required: true, message: 'Please select your Gender!' }]}
             >
-              <Radio.Group>
-                <Radio value="Male"
+              <Radio.Group hasFeedback>
+                <Radio hasFeedback  value="Male"
                 >
                   Male
                 </Radio>
-                <Radio value="Female"
+                <Radio  hasFeedback value="Female"
                 >
                   Female
                 </Radio>
@@ -211,13 +214,20 @@ const RegisterUserModal = (props) => {
             </Row>
 
 
-            <Row> <Form.Item>
+            <Row className="UserFormMargin"> 
+            <Form.Item  
+            name="Address"
+            label="Address" hasFeedback
+             rules={[{ required: true, message: 'Please enter your Address!' }]} >
               <TextArea showCount
+            
                 maxLength={500}
                 cols={400}
+                rules={[{ required: true, message: 'Please enter your Address!' }]}
                 autoSize={{ minRows: 3, maxRows: 3 }} />
-            </Form.Item> </Row>
-            <Row>
+            </Form.Item> 
+            </Row>
+            <Row className="UserFormMargin">
 
               <Col>
                 <Form.Item
@@ -228,10 +238,7 @@ const RegisterUserModal = (props) => {
                       required: true,
                       message: 'Please input your password!',
                     },
-                    {
-                      pattern: "^[a-zA-Z0-9!@#$%^&*]{6,16}$",
-                      message: 'Password Should be Alpha-Numeric!'
-                    }
+                   
                   ]}
 
                 >

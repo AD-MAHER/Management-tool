@@ -82,7 +82,7 @@ export default function Blog() {
                                         <span className="auther-class">{authicon} {i.author}</span>
 
 
-                                        <span className="icon-class data-class" >{editicon} &nbsp; &nbsp;
+                                        <span className="icon-class data-class" style={{cursor:'pointer'}} >{editicon} &nbsp; &nbsp;
                                         <DeletePost title={i.title} tokens={i.token}/></span>
 
                                     </Card>
