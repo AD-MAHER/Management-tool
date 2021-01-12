@@ -1,40 +1,52 @@
 import React from 'react'
 import { Form } from 'antd';
-import { Input , message} from 'antd';
+import { Input, message } from 'antd';
 import Button1 from '../../globalComponents/Button/Button1';
 import Zeronsec_Logo from "../../../../Core/Logo/Zeronsec_logo.svg"
 import LoginPage from './LoginPage';
 import Auth from "../../../../Auth";
+//  import {  useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+ import { Login_Verification } from "../../../../Core/Redux/Action/LoggAction";
 import axios from 'axios';
 export default function LoginForm(props) {
   const history = useHistory();
   const [form] = Form.useForm();
+  //  const dispatch = useDispatch()
 
   const onFinish = (values) => {
     console.log(values);
-    form.resetFields();
-    axios.post(`http://10.1.1.20:8080/login` , values).then(
-      response => {
-        console.log(response.data.status);
-        if (response.data.status === true) {
-          return (
-            Auth.login(() => {
-              history.push("/layout/users/");
-              message.success('You have successfully logged in')
-            })
-
-          )
-        } else {
-          return (
-            message.error('Please Enter Valid Username & Password')
-          );
-      };
-    }
-    )
-  };
-  
+    // form.resetFields();
+    //  dispatch(Login_Verification(values))
+     
+    axios.post(`/login`, values)
+      .then(
+        response => {
     
+          if (response.data.status === true) {
+
+            localStorage.setItem("authenticated", response.data.status);
+            localStorage.setItem("users", response.data.data.username);
+            localStorage.setItem("status", response.data.status);
+            localStorage.setItem("token", response.data.data.jwtToken.token);
+
+            return (
+              Auth.login(() => {
+                history.push("/layout/users/");
+                message.success('You have successfully logged in')
+              })
+
+            )
+          } else {
+            return (
+              message.error('Please Enter Valid Username & Password')
+            );
+          };
+        }
+      )
+  };
+
+
 
   return (
     <LoginPage  {...props}>
@@ -56,19 +68,20 @@ export default function LoginForm(props) {
           form={form}
           id="loginnow"
           onFinish={onFinish}
+
         >
 
-<Form.Item name="username" label="User Name :" rules={[
-           
+          <Form.Item name="username" label="User Name :" rules={[
+
             {
               required: true,
               message: 'Please input your username',
             },
           ]} >
 
-            <Input placeholder="Enter Your User Name"/>
+            <Input placeholder="Enter Your User Name" />
           </Form.Item>
-         
+
 
 
 
@@ -81,18 +94,22 @@ export default function LoginForm(props) {
 
             ]} >
 
-            <Input.Password  placeholder="Enter Your Password"/>
+            <Input.Password placeholder="Enter Your Password" />
           </Form.Item>
+          <div style={{ width: "50%", display: "flex"  }}>
 
-          <p className='F1'
-           
-            onClick={() => {
-              Auth.loginProcess(() => {
-            history.push("/req_otp");
-          });
-        }}>Forgot&nbsp;Password?</p>
-          
+            <span className='F1'
+             style={{cursor:"pointer" }}
+              onClick={() => {
+                Auth.loginProcess(() => {
+                  history.push("/req_otp");
+                });
+              }}>
+              Forgot&nbsp;Password?
+        </span>
 
+
+          </div>
 
           <Button1 type='primary'
 

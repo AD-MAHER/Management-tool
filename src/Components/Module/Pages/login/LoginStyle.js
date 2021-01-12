@@ -15,7 +15,7 @@ export const LoginStyle = styled.div`
 }
 .F1{
     color:#1890ff;
-    margin-left:150%;
+    /* margin-left:150%; */
 }
 .Icon_Class{
   font: 12px/30px;
@@ -134,15 +134,22 @@ export const LoginStyle = styled.div`
         width:100%;
         margin-left:238px
     }
+    .F1{
+    color:#1890ff;
+ /* float:right; */
+ margin-left:230px;
+    font-family:Roboto;
+}
     
      @media (max-width: 767px) {
     .left_div {
         display:none;
     }
+    
     .F1{
-    color:#1890ff;
-    margin-left:70%;
-    font-family:Roboto;
+    
+ margin-left:130px;
+    
 }
 .logpass{
        .ant-input-affix-wrapper{

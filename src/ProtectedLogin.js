@@ -10,7 +10,7 @@ import Auth from "./Auth";
     <Route
   {...rest}
       render={props => {
-        if (Auth.isAuthenticated()) {
+        if (Auth.isAuthorized()) {
           return <Component {...props} />;
         } else {
           return (

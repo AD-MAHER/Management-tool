@@ -5,15 +5,15 @@ import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import { NavLink, useHistory } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import LoginPage from '../../LoginPage';
-
+import axios from 'axios';
 
 export default function New_Pass(props) {
   const history = useHistory();
   const [form] = Form.useForm();
 
-  const onFinish = () => {
+  const onFinish = (values) => {
     form.resetFields();
-
+console.log(values)
     history.push("/");
 
   };

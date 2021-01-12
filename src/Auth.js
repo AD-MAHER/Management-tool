@@ -1,26 +1,30 @@
 class Auth {
-    constructor() {
-      this.authenticated = false;
-    
-    }
-  
-    login(cb) {
-      this.authenticated = true;
-      cb();
-    }
-    loginProcess(cb) {
-      this.authenticated =true;
-      cb();
-    }
-    logout(cb) {
-        this.authenticated = false;
-        cb();
-      }
-  
-   
-    isAuthenticated() {
-      return this.authenticated;
-    }
+  constructor() {
+    this.authenticated =  localStorage.getItem("authenticated");
+    this.authorized=true
   }
-  
-  export default new Auth();
+
+  login(cb) {
+    this.authenticated =   localStorage.getItem("authenticated");
+    cb();
+  }
+  loginProcess(cb) {
+    this.authorized =true;
+    cb();
+  }
+  logout(cb) {
+      this.authenticated = false;
+      cb();
+    }
+
+ 
+  isAuthenticated() {
+    return this.authenticated;
+  }
+
+  isAuthorized() {
+    return this.authorized;
+  }
+}
+
+export default new Auth();

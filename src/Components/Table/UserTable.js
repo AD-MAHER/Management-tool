@@ -25,7 +25,7 @@ const UserTable = () => {
   const tabledata = useSelector((state) => state.usertable.tableData);
 
 
-
+  const space = "  ";
 
 
 
@@ -52,7 +52,7 @@ const UserTable = () => {
               <span key={index}>
 
               <Tooltip placement="topLeft" title={`${val.firstName} ${val.lastName}`}>
-               <span >{`${val.firstName} ${val.lastName}`}</span>
+               <span >{`${val.firstName}  ${space}  ${val.lastName}`}</span>
                </Tooltip> 
               </span>
             ) : null

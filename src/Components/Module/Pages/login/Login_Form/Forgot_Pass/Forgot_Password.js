@@ -1,22 +1,42 @@
 import React from 'react'
-import {Form, Input } from 'antd';
+import {Form, Input , message } from 'antd';
 import Button1 from '../../../../globalComponents/Button/Button1';
 import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
 import { NavLink, useHistory } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import LoginPage from '../../LoginPage';
 import Auth from '../../../../../../Auth';
-
+import axios from 'axios';
 export default function Forgot_Password(props) {
     const history = useHistory();
     const [form] = Form.useForm();
 
-    const onFinish = () => {
+    const onFinish = (values) => {
         form.resetFields();
-        
-           Auth.loginProcess(() => {
-            history.push("/verify_otp");
-          });
+        console.log(values);
+           
+          axios.post(`/forgot-password?email=${values.email}` )
+      .then(
+        response => {
+    console.log(response);
+          if (response.data.status === true) {
+
+
+
+            return (
+              Auth.loginProcess(() => {
+                history.push("/verify_otp");
+                message.success('You will receive OTP via Email')
+              })
+            )
+            
+          } else {
+            return (
+              message.error('Please Enter Valid email Id')
+            );
+          };
+        }
+      )
       };
 
     return (

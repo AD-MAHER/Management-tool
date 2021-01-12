@@ -64,7 +64,8 @@ background-color:#222222;
     background-color:#222222;
 }
 .ant-popover-message-title{
-    color:#9EA4A9;
+    color:#E8E8E8;
+    opacity:80%;
     font-weight:bold;
    font-family:Roboto;
 }
