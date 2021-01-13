@@ -8,8 +8,6 @@ import { HeaderStyle } from './Header/HeaderStyle';
 import { SiderStyle } from './Sider/SiderStyle';
 import { FooterStyle } from './Footer/FooterStyle';
 import { ContentStyle } from './Content/ContentStyle';
-import { Provider } from "react-redux";
-import Store from "../../Core/Redux/Store";
 
 const { Header, Sider, Content } = Layout;
 
@@ -17,7 +15,7 @@ export default function Layout1(props) {
 
   return (
     <>
-      <Provider store={Store}>
+     
         <Layout style={{ height: "100vh", width: "100vw" }}>
           <HeaderStyle>
             <Header ><Header1 /></Header></HeaderStyle>
@@ -51,7 +49,6 @@ export default function Layout1(props) {
 
         </Layout>
 
-      </Provider>
 
     </>
   )

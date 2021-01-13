@@ -1,7 +1,7 @@
 class Auth {
   constructor() {
     this.authenticated =  localStorage.getItem("authenticated");
-    this.authorized=true
+    this.authorized= localStorage.getItem("authorized");
   }
 
   login(cb) {
@@ -9,7 +9,7 @@ class Auth {
     cb();
   }
   loginProcess(cb) {
-    this.authorized =true;
+    this.authorized =localStorage.getItem("authorized");
     cb();
   }
   logout(cb) {

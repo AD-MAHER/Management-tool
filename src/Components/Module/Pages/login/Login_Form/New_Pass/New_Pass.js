@@ -1,22 +1,33 @@
-import React from 'react'
-import { Input, Form } from 'antd';
-import Button1 from '../../../../globalComponents/Button/Button1';
+import React, { useState } from 'react'
+import { Input, Form , Button} from 'antd';
 import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import LoginPage from '../../LoginPage';
-import axios from 'axios';
+import { Change_Pass } from "../../../../../../Core/Redux/Action/NewPassAction";
+import { useDispatch } from "react-redux";
+
 
 export default function New_Pass(props) {
-  const history = useHistory();
+
   const [form] = Form.useForm();
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
 
   const onFinish = (values) => {
-    form.resetFields();
-console.log(values)
-    history.push("/");
+    console.log(values);
+    setLoading(true)
+    dispatch(Change_Pass(values));
+    setTimeout(() => {
 
+     
+      setLoading(false)
+    }, 1000);
   };
+
+   
+
+ 
   return (
     <>
       <LoginPage {...props}>
@@ -31,14 +42,28 @@ console.log(values)
 
 
 
-          <Form className="FormClass"
+          <Form className="FormClass "
             form={form}
             id="changePass"
             onFinish={onFinish}>
 
+            <Form.Item name="username" label="User Name :"
+          
+             rules={[
+
+              {
+                required: true,
+                message: 'Please input your username',
+              },
+            ]} >
+
+              <Input placeholder="Enter Your User Name" 
+              style={{ width:"93%", borderRadius: "5px"}} 
+               />
+            </Form.Item>
 
             <Form.Item
-              name="password"
+              name="newpassword"
               label="Password"
               rules={[
                 {
@@ -49,16 +74,16 @@ console.log(values)
               ]}
 
             >
-              <Input.Password />
+              <Input.Password style={{ width:"93%"}}  placeholder="Enter Your new password" />
             </Form.Item>
 
 
 
 
             <Form.Item
-              name="confirm"
+              name="confirmpassword"
               label="Confirm Password"
-              dependencies={['password']}
+              dependencies={['newpassword']}
 
               rules={[
                 {
@@ -67,7 +92,7 @@ console.log(values)
                 },
                 ({ getFieldValue }) => ({
                   validator(rule, value) {
-                    if (!value || getFieldValue('password') === value) {
+                    if (!value || getFieldValue('newpassword') === value) {
                       return Promise.resolve();
                     }
                     return Promise.reject('passwords are not match!');
@@ -75,16 +100,17 @@ console.log(values)
                 }),
               ]}
             >
-              <Input.Password />
+              <Input.Password style={{ width:"93%"}}   placeholder="Confirm Your new password" />
             </Form.Item>
 
-            <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium1"
-                className="button_css"
-                type='primary'
-                key="submit"
-                htmlType="submit" form="changePass">Change&nbsp;Password</Button1>
+            <Button 
+              // className="button_css"
+              loading={loading} 
+              type='primary'
+              key="submit"
+              htmlType="submit" form="changePass">Change&nbsp;Password</Button>
+               
 
-       
           </Form>
 
         </div>

@@ -1,49 +1,30 @@
-import React from 'react'
-import { Form } from 'antd';
-import { Input, message } from 'antd';
-import Button1 from '../../globalComponents/Button/Button1';
+import React, { useState } from 'react'
+import { Form , Button } from 'antd';
+import { Input } from 'antd';
 import Zeronsec_Logo from "../../../../Core/Logo/Zeronsec_logo.svg"
 import LoginPage from './LoginPage';
 import Auth from "../../../../Auth";
-//  import {  useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
- import { Login_Verification } from "../../../../Core/Redux/Action/LoggAction";
-import axios from 'axios';
+import { Login_Verification } from "../../../../Core/Redux/Action/LoggAction";
+
 export default function LoginForm(props) {
   const history = useHistory();
   const [form] = Form.useForm();
-  //  const dispatch = useDispatch()
-
-  const onFinish = (values) => {
-    console.log(values);
-    // form.resetFields();
-    //  dispatch(Login_Verification(values))
-     
-    axios.post(`/login`, values)
-      .then(
-        response => {
+  const dispatch = useDispatch()
+  const [loading, setLoading] = useState(false);
+   
+  const onFinish = (values , e) => {
     
-          if (response.data.status === true) {
+    console.log(values);
+  
+    setLoading(true)
+    dispatch(Login_Verification(values));
+    setTimeout(() => {
 
-            localStorage.setItem("authenticated", response.data.status);
-            localStorage.setItem("users", response.data.data.username);
-            localStorage.setItem("status", response.data.status);
-            localStorage.setItem("token", response.data.data.jwtToken.token);
-
-            return (
-              Auth.login(() => {
-                history.push("/layout/users/");
-                message.success('You have successfully logged in')
-              })
-
-            )
-          } else {
-            return (
-              message.error('Please Enter Valid Username & Password')
-            );
-          };
-        }
-      )
+     
+      setLoading(false)
+    }, 1000);
   };
 
 
@@ -96,10 +77,10 @@ export default function LoginForm(props) {
 
             <Input.Password placeholder="Enter Your Password" />
           </Form.Item>
-          <div style={{ width: "50%", display: "flex"  }}>
+          <div style={{ width: "50%", display: "flex" }}>
 
             <span className='F1'
-             style={{cursor:"pointer" }}
+              style={{ cursor: "pointer" }}
               onClick={() => {
                 Auth.loginProcess(() => {
                   history.push("/req_otp");
@@ -111,12 +92,14 @@ export default function LoginForm(props) {
 
           </div>
 
-          <Button1 type='primary'
-
+          <Button 
+          
+          type='primary'
             key="submit"
-            htmlType="submit" form="loginnow" buttonStyle="btn-success-solid" buttonSize="btn-medium"
-            className="button_css"
-          >Login&nbsp;Now</Button1>
+            htmlType="submit" form="loginnow" 
+            loading={loading} 
+            
+          >Login&nbsp;Now</Button>
 
 
         </Form>

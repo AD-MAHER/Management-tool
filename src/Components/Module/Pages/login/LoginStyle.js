@@ -8,6 +8,35 @@ export const LoginStyle = styled.div`
     color:#979797;
 }
 
+.ant-btn {
+color:#FFFFFF;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+  border-radius: 5px ;
+  cursor: pointer;
+
+width:233%;
+justify-content: center;
+  transition: transform 0.2s ease;
+}  
+
+.ant-btn-primary {
+  background-color:  #04C35C;
+  color: #fdfdfd;
+  border: none;
+
+  
+}
+
+.ant-btn:hover {
+  background-color: #04C35C;
+ transform :translate(2px);
+} 
+.ant-btn:focus {
+  background-color: #04C35C;
+ transform :translate(2px);
+} 
 
 .ant-form-item-explain.ant-form-item-explain-error{
     width:360px;
@@ -15,7 +44,6 @@ export const LoginStyle = styled.div`
 }
 .F1{
     color:#1890ff;
-    /* margin-left:150%; */
 }
 .Icon_Class{
   font: 12px/30px;
@@ -53,10 +81,7 @@ export const LoginStyle = styled.div`
         display:none;
     }}
   .ant-form-item-label > label {
-    color: #ffffff;
-    
-   
-    
+    color: #ffffff; 
 }
 .anticon svg {
     display: inline-block;
@@ -136,99 +161,35 @@ export const LoginStyle = styled.div`
     }
     .F1{
     color:#1890ff;
- /* float:right; */
  margin-left:230px;
     font-family:Roboto;
 }
-    
-     @media (max-width: 767px) {
-    .left_div {
-        display:none;
-    }
-    
-    .F1{
-    
- margin-left:130px;
-    
-}
-.logpass{
-       .ant-input-affix-wrapper{
-           width:105%;
-           
-       }
-   }
-    .Logo2{
-        height: 50px;
-        width :200px;
-        display:block;
-    }
-            
-    .Head1{
-        font-weight: bold;
-        font-size:16px;
-        color:#57A1D8;
-        font-style:Roboto;
-        margin-top:-0px;
-    }
-    .Head2{
-        font-weight: bold;
-        font-size:25px;
-        color:#E5E5E5;
-        margin-top:-20px;
-        margin-bottom:10px;
-        width:100vw;
-    }
-    .FormClass{
-            width:100%;
-            
-      
-    }
-    .Forgot{
-        width:100%;
-        float:right
-    }
-    .ant-input{
-    width:260px;
-    
-      
-    }
-   
-    .ant-form-item-control-input{
-        
-        width:250px;
-          border:#E8E8E8;
-            color:#FFFFFF; 
-        
-        }
-    
-    .Forgot{
-        margin-right:-150px;
-        
-       
-       
-    }
-    
-    .loginClass{
-       
-        font-size : 16px;
-        color: #E8E8E8;
-        height:10%;
-        width:50vw;
-        margin-top : 25%;
-        margin-bottom : 25%;
-        margin-left: 20%;
-        margin-right: 20%;
-       
-    }
-    
-  
- }
 
+
+
+}
+   
+@media (min-width: 2560px) {
+    .ant-btn {
+
+width:140%;
+} 
+}
+  
+ 
  @media (max-width: 768px) {
     .left_div {
         display:none;
     }
-   
+    .F1{
+  
+ margin-left:130px;
+    
+}
+    .ant-btn {
+
+width:140%;
+} 
     .Logo2{
         height: 50px;
         width :200px;
@@ -273,12 +234,12 @@ export const LoginStyle = styled.div`
         
         }
     
-    .Forgot{
+    /* .Forgot{
         margin-right:-150px;
         
        
        
-    }
+    } */
     
     .loginClass{
        
@@ -294,12 +255,12 @@ export const LoginStyle = styled.div`
     }
     
    
-    .Forgot{
+    /* .Forgot{
         
         margin-right:-72%;
         
         
-    }
+    } */
  }
 
  
@@ -316,6 +277,10 @@ export const LoginStyle = styled.div`
        margin-right: 20%;
       
    }
+   .ant-btn {
+
+width:165%;
+} 
     
  } 
  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) 
@@ -333,7 +298,7 @@ export const LoginStyle = styled.div`
       
    }
   
- }  
+}
  
  
 `;

@@ -1,38 +1,19 @@
 import React from 'react'
 import './Button1.css';
+import {Button} from "antd"
 
-const STYLES =[
-    "btn-primary-solid",
-    "btn-warning-solid",
-    "btn-danger-solid",
-    "btn-success-solid",
-    "btn-primary-outline",
-    "btn-warning-outline",
-    "btn-danger-outline",
-    "btn-success-outline",
-];
 
-const SIZES =[
-    "btn-large",
-    "btn-small",
-    "btn-medium",
-    "btn-medium1",
-];
-function Submit1({children , type, onClick , buttonStyle , buttonSize}){
-    const checkButtonStyle = STYLES.includes(buttonStyle)
-    ? buttonStyle
-    : STYLES[0];
-
-  const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
+function Submit1({children , type, onClick , loadings}){
+  
 
     return(
 
-        <button
-        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+        <Button
+       loading={loadings}
         onClick={onClick}
         type={type}>
          {children}
-        </button>
+        </Button>
       
     )
 }

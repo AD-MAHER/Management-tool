@@ -17,8 +17,6 @@ export default function Header1(props) {
     const userNameSlice3 = str.slice(1);
     const showPopconfirm = () => {
         setVisible(true);
-
-
     };
 
     const handleOk = () => {
@@ -38,6 +36,7 @@ export default function Header1(props) {
                 history.push("/");
             });
             message.success(' You have successfully logged out')
+            localStorage.removeItem("users");
         }
         else {
             return (

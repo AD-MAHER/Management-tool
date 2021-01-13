@@ -34,4 +34,16 @@ export const menus = [
         iconName: "taskmanagementMenu",
         routingPath: "/layout/taskmanagement"
     },
+    {
+        key: "notes",
+        name: "Notes",
+        iconName: "notesMenu",
+        routingPath: "/layout/notes"
+    },
+    {
+        key: "meeting",
+        name: "Meeting",
+        iconName: "meetingMenu",
+        routingPath: "/layout/meetings"
+    },
 ]

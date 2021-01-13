@@ -1,18 +1,18 @@
 import React from 'react'
-import { ChatStyle } from './ChatStyle';
+import { NoteStyle} from './NotesStyle';
 import {Button }  from "antd"
 
 
-export default function Notes() {
+export default function Users() {
     return (
 
         <div >
-            <ChatStyle>
+            <NoteStyle>
 
                 <div >
 
                     <div>
-                        <span className='title-chat'>Chats</span>
+                        <span className='title-notes'>Notes</span>
                         <span className="create-button"><Button>Create</Button></span>
 
                     </div>
@@ -20,7 +20,7 @@ export default function Notes() {
                 </div>
 
 
-              </ChatStyle>
+              </NoteStyle>
 
         </div>
 

@@ -1,44 +1,26 @@
 import React, { useState } from 'react'
-import { Form, Input  ,message } from 'antd';
-import Button1 from '../../../../globalComponents/Button/Button1';
+import { Form, Input , Button  } from 'antd';
 import Zeronsec_Logo from '../../../../../../Core/Logo/Zeronsec_logo.svg';
-import { useHistory, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import LoginPage from '../../LoginPage';
-import Auth from "../../../../../../Auth";
 import { onlyDigit } from "../../../../globalComponents/ValidationArray/onlyValidation";
-import axios from 'axios';
+import { useDispatch } from "react-redux";
+import  {Verify_Otp } from "../../../../../../Core/Redux/Action/VerifyOTPAction";
 
 export default function Verify_OTP(props) {
     const [symbolsArr2] = useState(onlyDigit);
-    const history = useHistory();
+    const dispatch = useDispatch();
     const [form] = Form.useForm();
-
+const [loading, setLoading] = useState(false);
     const onFinish = (values) => {
         form.resetFields();
+        setLoading(true);
         console.log(values);
-              axios.post(`/verify-otp?otp=${values.OTP}` )
-      .then(
-        response => {
-    console.log(response);
-          if (response.data.status === true) {
-
-            return (
-             
-          Auth.loginProcess(() => {
-            message.success('OTP is successfully verified');
-                  history.push("/new_pass");
-                  message.success('Now you can create your New Password');
-                })
-            )
-            
-          } else {
-            return (
-              message.error('Please Enter Valid OTP')
-            );
-          };
-        }
-      )
+        dispatch(Verify_Otp(values));
+        setTimeout(() => {
+            setLoading(false)
+          }, 1000);
 
     };
     return (
@@ -69,11 +51,12 @@ export default function Verify_OTP(props) {
 
 
 
-                        <Button1 buttonStyle="btn-success-solid" buttonSize="btn-medium"
-                            className="button_css" type='primary'
+                        <Button 
+                        loading={loading} 
+                            type='primary'
                             key="submit"
                             htmlType="submit" form="verifyotp"
-                        >Verify&nbsp;OTP</Button1>
+                        >Verify&nbsp;OTP</Button>
 
 
                     </Form>
