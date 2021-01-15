@@ -10,14 +10,17 @@ export const Forgot_Pass = (data) => async (dispatch) => {
         localStorage.setItem("forgot", JSON.stringify(res.data.status));
         localStorage.setItem("authorized", JSON.stringify(res.data.status));
         if (JSON.parse(localStorage.getItem("forgot")) === true) {
-          window.location.assign("/verify_otp");
+
           message.success(res.data.message);
+          setTimeout(() => {
+            window.location.assign("/verify_otp");
+          }, 1000);
         }
       }
     })
     .catch((err) => {
       localStorage.setItem("forgot", JSON.stringify(err.message));
-      // message.error(err.res.data.message);
+      message.error(err.message);
 
     });
 };

@@ -22,25 +22,32 @@ export default function Header1(props) {
     const handleOk = () => {
         setConfirmLoading(true);
         setTimeout(() => {
-            setVisible(false);
-            setConfirmLoading(false);
-        }, 5000);
-        localStorage.removeItem("authenticated");
-        localStorage.removeItem("status");
-        localStorage.removeItem("token");
-        const Authenticated = localStorage.getItem("authenticated")
-
+            setConfirmLoading(false); 
+            setVisible(false); 
+          }, 1000);
+          localStorage.removeItem("authenticated");
+          localStorage.removeItem("status");
+          localStorage.removeItem("token");
+          const Authenticated = localStorage.getItem("authenticated")
         if (Authenticated === null) {
 
-            Auth.logout(() => {
-                history.push("/");
-            });
-            message.success(' You have successfully logged out')
-            localStorage.removeItem("users");
+           
+            setTimeout(() => {
+                Auth.logout(() => {
+                    history.push("/");
+                    message.success(' You have successfully logged out')
+                    localStorage.removeItem("users");
+                });
+              }, 1500)
+           
+          
         }
         else {
             return (
-                message.error(' logout error !!')
+                setTimeout(() => {
+                    message.error(' logout error !!') 
+                  }, 4000)
+              
             );
         };
 

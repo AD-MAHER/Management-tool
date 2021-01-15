@@ -20,7 +20,7 @@ export default function Forgot_Password(props) {
     dispatch(Forgot_Pass(values));
     setTimeout(() => {
       setLoading(false)
-    }, 80000);
+    }, 4000);
   };
 
   return (

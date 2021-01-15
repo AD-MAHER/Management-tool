@@ -63,10 +63,10 @@ const CreateGroupModal = () => {
                     }}
                     onFinish={Finish}
                 >
-                    <Form.Item>
+                    <Form.Item >
                         <span className="CreateGroupElement">Group Name</span><br /><br />
 
-                        <Input type="text" value={groupName} onChange={(e) => { setGroupName(e.target.value) }}
+                        <Input type="text" value={groupName} required="true" onChange={(e) => { setGroupName(e.target.value) }}
                             placeholder="Enter Group Name" />
                     </Form.Item>
 

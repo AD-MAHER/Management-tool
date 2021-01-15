@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import 'antd/dist/antd.css';
 import { TableTheme } from "./TableStyle"
 import { Table, Tooltip, } from 'antd';
-import { useSelector } from "react-redux";
+import { useSelector , useDispatch } from "react-redux";
 import DeleteUser from "../Module/globalComponents/Modal/User Modal/DeleteUser";
-
+import  {List_Users , DeleteUsers  } from '../../Core/Redux/Action/UserTableAction'
 
 
 const { Column } = Table;
@@ -16,18 +16,15 @@ const editicon = (<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xm
 )
 
 
-
-
-
-
-
 const UserTable = () => {
-  const tabledata = useSelector((state) => state.usertable.tableData);
-
-
+  
+  const dispatch = useDispatch();
+   const tabledata = useSelector((state) => state.usertable.tableData);
   const space = "  ";
-
-
+  console.log("Ad", tabledata);
+  useEffect(() => {
+    dispatch(List_Users())
+  }, []);
 
   return (
     <TableTheme>
@@ -76,10 +73,15 @@ const UserTable = () => {
 
 
           />
-          <Column   ellipsis={true} title="Last Login" dataIndex="lastLogin" key="lastLogin" className="Last-Log"
+          {/* <Column   ellipsis={true} title="Last Login" dataIndex="lastLogin" key="lastLogin" className="Last-Log"
             render={lastLogin => (
               <Tooltip placement="topLeft" title={lastLogin}>
                 {lastLogin}
+              </Tooltip>)} /> */}
+              <Column   ellipsis={true} title="User Name" dataIndex="username" key="lastLogin" className="Last-Log"
+            render={username => (
+              <Tooltip placement="topLeft" title={username}>
+                {username}
               </Tooltip>)} />
           <Column   ellipsis={true} title="Email" dataIndex="email" key="email"
 
@@ -93,10 +95,12 @@ const UserTable = () => {
               </>
             )}
 
-
-
-
           />
+             <Column   ellipsis={true} title="Contact" dataIndex="contact" key="contact" className="Last-Log"
+            render={contact => (
+              <Tooltip placement="topLeft" title={contact}>
+                {contact}
+              </Tooltip>)} />
           <Column title="Action" dataIndex="token" key="Action" render={token =>
             <>
              <Tooltip placement="topRight" title="edit">

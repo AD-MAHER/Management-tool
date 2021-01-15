@@ -19,6 +19,6 @@ export const Verify_Otp = (data) => async (dispatch) => {
     })
     .catch((err) => {
       localStorage.setItem("OTP", JSON.stringify(err.message));
-      message.error(err.response.data.message);
+      message.error(err.message);
     });
 };

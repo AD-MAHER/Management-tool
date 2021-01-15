@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Tooltip } from "antd"
 import { useDispatch  , useSelector} from "react-redux";
-import { DeleteUsers } from "../../../../../Core/Redux/Action/UserDelAction";
+import { DeleteUsers } from "../../../../../Core/Redux/Action/UserTableAction";
 
 
 export default function DeleteUser(props) {

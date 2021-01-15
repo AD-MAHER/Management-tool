@@ -22,6 +22,6 @@ export const Change_Pass = (data) => async (dispatch) => {
 
     .catch((err) => {
       localStorage.setItem("change", JSON.stringify(err.response.data.message));
-      message.error(err.response.data.message);
+      message.error(err.message);
     });
 };

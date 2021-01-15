@@ -205,14 +205,14 @@ display:none;
     overflow:auto;
 }
 .Position1{
-    margin-left:23%;
+    margin-left:15%;
 }
 .Position2{
-    margin-left:10%;
+    margin-left:15%;
     ${'' /* margin-bottom:-20%; */}
 }
 .Position3{
-    margin-left:20%;
+    margin-left:15%;
     
 }
 .Position4{
@@ -221,7 +221,7 @@ display:none;
     margin-bottom:-20%;
 }
 .UserFormMargin{
-    margin-top:-3%;
+    margin-top:-2%;
 }
 .ant-select-item-option-active{
     background:#172B3A;

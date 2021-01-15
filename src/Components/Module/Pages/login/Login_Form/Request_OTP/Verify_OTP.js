@@ -43,7 +43,7 @@ const [loading, setLoading] = useState(false);
                          onKeyDown={e => symbolsArr2.includes(e.key) && e.preventDefault()}
                          rules={[{ required: true, message: 'OTP is required' }]} >
                             <Input  
-                            autoComplete="off"
+                            autoComplete="off" placeholder="e.g. 123456"
                               maxLength={6} minLength={6} hasFeedback  />
                         </Form.Item>
 

@@ -21,10 +21,8 @@ export default function LoginForm(props) {
     setLoading(true)
     dispatch(Login_Verification(values));
     setTimeout(() => {
-
-     
       setLoading(false)
-    }, 1000);
+    }, 3000);
   };
 
 
