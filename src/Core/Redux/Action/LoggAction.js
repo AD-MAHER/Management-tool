@@ -17,9 +17,11 @@ export const Login_Verification = (data ) => async dispatch => {
         localStorage.setItem("users",  res.data.data.username);
         message.success(res.data.message);
       }
+      
     } else {
       localStorage.setItem("status", JSON.stringify(res.data.status));
-      message.error(res.data.message);
+      message.error(res.message);
+       window.location.assign("/");
     }
   })
 
@@ -29,8 +31,11 @@ export const Login_Verification = (data ) => async dispatch => {
     console.log(localStorage.getItem("proxy"))
     if (localStorage.getItem("proxy") ==="Request failed with status code 500") {
       message.error("server did not response ");
+      window.location.assign("/");
     }else{
-       message.error(err);
+       message.error(err.message);
+       
+      window.location.assign("/");
     }
   });
 };

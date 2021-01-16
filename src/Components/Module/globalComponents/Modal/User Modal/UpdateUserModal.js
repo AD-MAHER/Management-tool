@@ -1,24 +1,27 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { Form, Input, Button, Radio, Select, Modal} from "antd";
 import { Row, Col } from "antd";
 import { onlyChar, onlyDigit } from "../../ValidationArray/onlyValidation";
-import { useDispatch } from "react-redux";
-import { Create_User} from "../../../../../Core/Redux/Action/UserTableAction";
+import { useDispatch , useSelector} from "react-redux";
+import { Update_User} from "../../../../../Core/Redux/Action/UserTableAction";
 
 
-const RegisterUserModal = (props) => {
+const UpdateUserModal = (props) => {
   const [form] = Form.useForm();
   const dispatch = useDispatch()
-
+  const updateData = useSelector((state) => state.usertable.updateData);
   const { TextArea } = Input;
   const { Option } = Select;
-  
+
+console.log("amd", updateData)
   const onFinish = (values) => {
     console.log("Success:", values);
-    dispatch(Create_User(values));
-   //form.resetFields();
-    setIsModalVisible(false);
+    dispatch(Update_User((props.tokenz),values));
+   form.resetFields();
+  
+  setIsModalVisible(false);
   };
+ // form.setFieldsValue({});
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -304,4 +307,4 @@ const RegisterUserModal = (props) => {
     </>
   );
 };
-export default RegisterUserModal;
+export default UpdateUserModal;

@@ -1,5 +1,7 @@
 export const DELETE_USER = "Delete_Users";
 export const LIST_USERS = "List_Users";
+export const CREATE_USER = "Create_User";
+export const UPDATE_USER = "Update_User";
 
 export const DELETE_GROUP = "Delete_Groups";
 export const DELETE_POST = "Delete_Posts";

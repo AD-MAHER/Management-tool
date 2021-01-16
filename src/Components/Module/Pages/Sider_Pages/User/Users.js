@@ -13,7 +13,8 @@ export default function Users() {
 
                     <div>
                         <span className='title-user'>Users</span>
-                        <span className="create-button"><RegisterUserModal /></span>
+                        <span className="create-button"><RegisterUserModal openButton="Create" 
+                           ModalNameButton="Save" ModalName="Register User"/></span>
 
                     </div>
                     <hr className="border-class" />

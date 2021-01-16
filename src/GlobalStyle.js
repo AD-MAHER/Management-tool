@@ -62,6 +62,8 @@ background-color:#222222;
     padding: 12px 16px;
     color:#FFFFFF;
     background-color:#222222;
+    ${'' /* backdrop-filter: blur(10px); */}
+    ${'' /* box-shadow:0px 3px 3px 2px #394D5C; */}
 }
 .ant-popover-message-title{
     color:#E8E8E8;
@@ -204,29 +206,33 @@ display:none;
     border-color: #ff4d4f !important;
     overflow:auto;
 }
-.Position1{
-    margin-left:15%;
-}
-.Position2{
-    margin-left:15%;
-    ${'' /* margin-bottom:-20%; */}
-}
-.Position3{
-    margin-left:15%;
-    
+
+
 }
 .Position4{
     margin-left:17%;
-    margin-top: 1%;
+    ${'' /* margin-top: 1%; */}
     margin-bottom:-20%;
 }
-.UserFormMargin{
-    margin-top:-2%;
+.UserForm{
+    .ant-row{
+       
+       justify-content:space-between;
+
+   }
+   .ant-input{
+      width:175px;
+      height:30px;
+
+   }
+   .ant-input-textarea{.ant-input{
+     width:100%}
+   }
 }
 .ant-select-item-option-active{
     background:#172B3A;
     
-}
+} 
 
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
     color: rgba(0, 0, 0, 0.85);
@@ -430,7 +436,7 @@ display:none;
 }
 .ant-modal-body{
            background:#292A2B;
-           overflow:auto;
+           ${'' /* overflow:auto; */}
                
                 .postheader{
                         span{
@@ -506,7 +512,7 @@ display:none;
 }
         .ant-modal-body{
            background:#292A2B;
-           overflow:scroll;
+           ${'' /* overflow:scroll; */}
                
                 
                  .postPhoto{
